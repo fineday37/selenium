@@ -1,0 +1,22 @@
+2021-10-15 10:03:10,791 test_res.py test_001 ERROR unsupported format string passed to dict.__format__
+2021-10-15 10:03:11,211 test_res.py test_002 ERROR format() takes at most 2 arguments (3 given)
+2021-10-15 10:03:30,015 test_res.py test_001 ERROR unsupported format string passed to dict.__format__
+2021-10-15 10:03:30,415 test_res.py test_002 ERROR format() takes at most 2 arguments (3 given)
+2021-10-15 10:05:04,702 test_res.py test_001 INFO 登录账号是{'result': True, 'message': None, 'userData': {'roles': '', 'userInfo': {'realName': '高新体验店', 'isweb': '前台权限', 'storeLogon': 'store', 'weight': 1, 'userName': 'suchangzhou', 'userId': '696382983EB7405EB67B39EC09A50329', 'token': 'cookie'}, 'privateKey': '', 'tenantType': '02', 'mshopType': '2', 'isSjky': True}, 'succeed': True}，密码是高新体验店
+2021-10-15 10:05:05,104 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-15 10:06:59,154 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-15 10:06:59,574 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-15 10:09:43,748 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-15 10:09:44,120 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-15 10:22:56,515 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-15 10:22:56,945 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-15 16:50:04,698 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-15 16:50:05,083 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-21 13:53:12,670 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-21 13:53:13,219 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-22 13:32:58,373 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-22 13:32:58,936 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-10-29 14:53:16,059 test_res.py test_001 INFO 登录账号是高新体验店
+2021-10-29 14:53:16,409 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+2021-11-11 09:37:55,045 test_res.py test_001 INFO 登录账号是高新体验店
+2021-11-11 09:37:55,998 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0

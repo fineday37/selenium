@@ -1,0 +1,56 @@
+2021-10-26 14:12:16,987 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:12:34,608 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:15:09,210 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:15:15,368 test_page.py test_003 ERROR Message: element click intercepted: Element <li data-v-7eff8c12="" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected">...</li> is not clickable at point (660, 281). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1168;">...</div>
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:15:59,214 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:16:16,159 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:16:57,648 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:17:03,628 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-997db4f4="" class="add-goods-btn">...</span> is not clickable at point (418, 445). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1165;">...</div>
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:17:20,495 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:17:26,378 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-997db4f4="" class="add-goods-btn">...</span> is not clickable at point (418, 445). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1162;">...</div>
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:17:52,007 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:18:00,380 test_page.py test_003 INFO 商品名称为测试规格
+2021-10-26 14:23:30,307 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:23:48,256 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:27:16,306 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:27:35,747 test_page.py test_003 ERROR list index out of range
+2021-10-26 14:29:07,792 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:29:27,032 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 14:40:10,152 test_page.py test_001 INFO 账号是suchangzhou，密码是sjky2018
+2021-10-26 14:40:21,636 test_page.py test_003 INFO 商品名称为测试规格
+2021-10-26 16:45:51,741 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 16:46:01,945 test_page.py test_003 INFO 新建商品成功商品名称为测试规格
+2021-10-26 16:54:24,712 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 16:54:35,733 test_page.py test_003 ERROR Message: invalid argument: invalid locator
+  (Session info: chrome=94.0.4606.71)
+
+2021-10-26 16:56:57,074 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 16:57:16,032 test_page.py test_003 ERROR list index out of range
+2021-10-26 17:02:08,123 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 17:02:18,582 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-10-26 17:04:42,747 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 17:05:01,454 test_page.py test_003 ERROR list index out of range
+2021-10-26 17:07:29,361 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 17:07:47,567 test_page.py test_003 ERROR list index out of range
+2021-10-26 17:08:35,582 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 17:08:43,900 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-10-26 17:09:54,228 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-26 17:10:04,746 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-10-29 15:05:16,481 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-10-29 15:05:27,417 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-11-11 09:16:51,155 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-11 10:09:04,705 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>“测试”.html</h1>
+    <p>Report generated on 15-Oct-2021 at 10:22:56 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>E:\jdk1.8</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "1.0.0", "py": "1.10.0", "pytest": "6.2.5"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-7-6.1.7601-SP1</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"allure-pytest": "2.9.44", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.7.3</td></tr></table>
+    <h2>Summary</h2>
+    <p>2 tests ran in 0.66 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_res.py::Testpage::test_001</td>
+          <td class="col-duration">0.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>200
+&lt;class &#x27;dict&#x27;&gt;
+{&#x27;message&#x27;: None,
+ &#x27;result&#x27;: True,
+ &#x27;succeed&#x27;: True,
+ &#x27;userData&#x27;: {&#x27;isSjky&#x27;: True,
+              &#x27;mshopType&#x27;: &#x27;2&#x27;,
+              &#x27;privateKey&#x27;: &#x27;&#x27;,
+              &#x27;roles&#x27;: &#x27;&#x27;,
+              &#x27;tenantType&#x27;: &#x27;02&#x27;,
+              &#x27;userInfo&#x27;: {&#x27;isweb&#x27;: &#x27;前台权限&#x27;,
+                           &#x27;realName&#x27;: &#x27;高新体验店&#x27;,
+                           &#x27;storeLogon&#x27;: &#x27;store&#x27;,
+                           &#x27;token&#x27;: &#x27;cookie&#x27;,
+                           &#x27;userId&#x27;: &#x27;696382983EB7405EB67B39EC09A50329&#x27;,
+                           &#x27;userName&#x27;: &#x27;suchangzhou&#x27;,
+                           &#x27;weight&#x27;: 1}}}
+&lt;class &#x27;dict&#x27;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2021-10-15 10:22:56,515 test_res.py test_001 INFO 登录账号是高新体验店
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_res.py:18 登录账号是高新体验店<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_res.py::Testpage::test_002</td>
+          <td class="col-duration">0.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>200
+&lt;class &#x27;requests.models.Response&#x27;&gt;
+{&#x27;message&#x27;: None,
+ &#x27;result&#x27;: True,
+ &#x27;succeed&#x27;: True,
+ &#x27;userData&#x27;: {&#x27;orderCount&#x27;: 4,
+              &#x27;orderList&#x27;: [{&#x27;accountPrice&#x27;: 218.6,
+                             &#x27;accuracyNum&#x27;: &#x27;2&#x27;,
+                             &#x27;accuracyType&#x27;: &#x27;3&#x27;,
+                             &#x27;achvState&#x27;: &#x27;0&#x27;,
+                             &#x27;achvTime&#x27;: None,
+                             &#x27;achvUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;achvUserName&#x27;: &#x27;&#x27;,
+                             &#x27;actCouponCode&#x27;: None,
+                             &#x27;actCouponName&#x27;: None,
+                             &#x27;actCouponPrice&#x27;: None,
+                             &#x27;actDetails&#x27;: &#x27;优惠券::&#x27;,
+                             &#x27;actFullPrice&#x27;: None,
+                             &#x27;assistGoodsList&#x27;: None,
+                             &#x27;assistSheetCode&#x27;: None,
+                             &#x27;attachPath&#x27;: &#x27;&#x27;,
+                             &#x27;bankAccount&#x27;: None,
+                             &#x27;bankName&#x27;: None,
+                             &#x27;cmplTime&#x27;: None,
+                             &#x27;code&#x27;: &#x27;7B40CA9A2F114861B43ADACCF690B3E1&#x27;,
+                             &#x27;createTime&#x27;: 1632884921360,
+                             &#x27;createTimeString&#x27;: None,
+                             &#x27;createUserCode&#x27;: &#x27;696382983EB7405EB67B39EC09A50329&#x27;,
+                             &#x27;createUserName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;curProcessNode&#x27;: &#x27;DED39527CC6C4AB1B93B029AF1E30F33&#x27;,
+                             &#x27;curProcessNodeEndTime&#x27;: None,
+                             &#x27;curProcessUser&#x27;: &#x27;nobody&#x27;,
+                             &#x27;curProcessUserName&#x27;: None,
+                             &#x27;debtPrice&#x27;: 18.6,
+                             &#x27;delRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;deliver&#x27;: None,
+                             &#x27;deliverPlanTime&#x27;: None,
+                             &#x27;deliverPrice&#x27;: 0.0,
+                             &#x27;deliverSheetCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverSheetName&#x27;: None,
+                             &#x27;deliverStateCode&#x27;: &#x27;a&#x27;,
+                             &#x27;deliverType&#x27;: None,
+                             &#x27;deliverTypeCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverTypeName&#x27;: &#x27;&#x27;,
+                             &#x27;discountPrice&#x27;: 200.0,
+                             &#x27;discountno&#x27;: &#x27;&#x27;,
+                             &#x27;editionType&#x27;: None,
+                             &#x27;erpBarCode&#x27;: &#x27;&#x27;,
+                             &#x27;erpOrderFilePath&#x27;: &#x27;&#x27;,
+                             &#x27;flowCode&#x27;: None,
+                             &#x27;hasInner&#x27;: None,
+                             &#x27;id&#x27;: 2773882,
+                             &#x27;identification&#x27;: None,
+                             &#x27;ifSaveMember&#x27;: &#x27;551559.76&#x27;,
+                             &#x27;inToTime&#x27;: None,
+                             &#x27;innerOrder&#x27;: &#x27;0&#x27;,
+                             &#x27;intoTime&#x27;: None,
+                             &#x27;invoiceAddress&#x27;: None,
+                             &#x27;invoicePhone&#x27;: None,
+                             &#x27;invoiceRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;invoiceSheetCode&#x27;: None,
+                             &#x27;invoiceStatus&#x27;: None,
+                             &#x27;isAfterSale&#x27;: None,
+                             &#x27;isInvoice&#x27;: &#x27;0&#x27;,
+                             &#x27;isSave&#x27;: None,
+                             &#x27;isenable&#x27;: False,
+                             &#x27;lockOrder&#x27;: False,
+                             &#x27;lockTime&#x27;: None,
+                             &#x27;lookUp&#x27;: None,
+                             &#x27;matUseSheetList&#x27;: None,
+                             &#x27;materialType&#x27;: &#x27;02&#x27;,
+                             &#x27;mbrMember&#x27;: None,
+                             &#x27;memberCategoryCode&#x27;: &#x27;9AFE134358E1403B9D71B674590F43F2&#x27;,
+                             &#x27;memberCategoryName&#x27;: &#x27;粉丝&#x27;,
+                             &#x27;memberCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactLocation&#x27;: &#x27;&#x27;,
+                             &#x27;memberContactName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberContactPhone&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberLabel&#x27;: None,
+                             &#x27;memberName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberNo&#x27;: None,
+                             &#x27;name&#x27;: None,
+                             &#x27;ncSaleOutState&#x27;: &#x27;&#x27;,
+                             &#x27;notes&#x27;: &#x27;&#x27;,
+                             &#x27;odrOrderGoods&#x27;: None,
+                             &#x27;odrOrderGoodsName&#x27;: [&#x27;工厂名片&#x27;, &#x27;工厂名片&#x27;],
+                             &#x27;odrOrderGoodsNcs&#x27;: None,
+                             &#x27;odrOrderProcesses&#x27;: None,
+                             &#x27;orderClass&#x27;: &#x27;&#x27;,
+                             &#x27;orderDeliveryMethod&#x27;: &#x27;&#x27;,
+                             &#x27;orderLabel&#x27;: &#x27;&#x27;,
+                             &#x27;orderLeadTime&#x27;: None,
+                             &#x27;orderProject&#x27;: &#x27;&#x27;,
+                             &#x27;orderTask&#x27;: &#x27;&#x27;,
+                             &#x27;orderType&#x27;: &#x27;&#x27;,
+                             &#x27;outAssisitSheetCode&#x27;: None,
+                             &#x27;pageNum&#x27;: 1,
+                             &#x27;pageOffset&#x27;: 0,
+                             &#x27;pageSize&#x27;: 20,
+                             &#x27;paidPrice&#x27;: 0.0,
+                             &#x27;parentTenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;payInfoCode&#x27;: None,
+                             &#x27;payStateCode&#x27;: &#x27;k&#x27;,
+                             &#x27;payTime&#x27;: None,
+                             &#x27;payTimeString&#x27;: None,
+                             &#x27;payTypeCode&#x27;: None,
+                             &#x27;payTypeName&#x27;: None,
+                             &#x27;paymontwx&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeCode&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeColor&#x27;: None,
+                             &#x27;prdNodeInTime&#x27;: None,
+                             &#x27;prdNodeName&#x27;: None,
+                             &#x27;prdNodeUserCode&#x27;: None,
+                             &#x27;printNum&#x27;: 0,
+                             &#x27;processNodeCode&#x27;: &#x27;DF2181CD2D0E4D5C8FEFA1BE83C236DF&#x27;,
+                             &#x27;processNodeColor&#x27;: &#x27;#000000&#x27;,
+                             &#x27;processNodeName&#x27;: &#x27;设计&#x27;,
+                             &#x27;produceOrderCode&#x27;: None,
+                             &#x27;provisionalPaidPrice&#x27;: None,
+                             &#x27;provisionalPayStateCode&#x27;: None,
+                             &#x27;realPrice&#x27;: 18.6,
+                             &#x27;remarks&#x27;: &#x27;&#x27;,
+                             &#x27;salePrice&#x27;: 218.6,
+                             &#x27;savePerfFlag&#x27;: None,
+                             &#x27;saveTime&#x27;: None,
+                             &#x27;sellUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;sellUserName&#x27;: None,
+                             &#x27;sheetCode&#x27;: &#x27;21092904D8A7&#x27;,
+                             &#x27;shopName&#x27;: None,
+                             &#x27;source&#x27;: &#x27;2&#x27;,
+                             &#x27;sourceName&#x27;: &#x27;线下订单&#x27;,
+                             &#x27;sourceTen&#x27;: &#x27;&#x27;,
+                             &#x27;storeCode&#x27;: None,
+                             &#x27;supplierCode&#x27;: None,
+                             &#x27;tenDeliverPrice&#x27;: None,
+                             &#x27;tenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;tenantName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;toNcSaleOrder&#x27;: None,
+                             &#x27;token&#x27;: None,
+                             &#x27;type&#x27;: None,
+                             &#x27;updateTime&#x27;: 1632897997056,
+                             &#x27;valid&#x27;: &#x27;1&#x27;,
+                             &#x27;vipOrder&#x27;: None,
+                             &#x27;vipPrice&#x27;: None,
+                             &#x27;writeOffPrice&#x27;: None},
+                            {&#x27;accountPrice&#x27;: 218.6,
+                             &#x27;accuracyNum&#x27;: &#x27;2&#x27;,
+                             &#x27;accuracyType&#x27;: &#x27;3&#x27;,
+                             &#x27;achvState&#x27;: &#x27;0&#x27;,
+                             &#x27;achvTime&#x27;: None,
+                             &#x27;achvUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;achvUserName&#x27;: &#x27;&#x27;,
+                             &#x27;actCouponCode&#x27;: None,
+                             &#x27;actCouponName&#x27;: None,
+                             &#x27;actCouponPrice&#x27;: None,
+                             &#x27;actDetails&#x27;: &#x27;优惠券::&#x27;,
+                             &#x27;actFullPrice&#x27;: None,
+                             &#x27;assistGoodsList&#x27;: None,
+                             &#x27;assistSheetCode&#x27;: None,
+                             &#x27;attachPath&#x27;: &#x27;&#x27;,
+                             &#x27;bankAccount&#x27;: None,
+                             &#x27;bankName&#x27;: None,
+                             &#x27;cmplTime&#x27;: None,
+                             &#x27;code&#x27;: &#x27;158114212FA14C7BBC4D98468077C882&#x27;,
+                             &#x27;createTime&#x27;: 1632880039370,
+                             &#x27;createTimeString&#x27;: None,
+                             &#x27;createUserCode&#x27;: &#x27;696382983EB7405EB67B39EC09A50329&#x27;,
+                             &#x27;createUserName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;curProcessNode&#x27;: &#x27;B3D8A45EEA5B4AADBCAB9407D200E992&#x27;,
+                             &#x27;curProcessNodeEndTime&#x27;: None,
+                             &#x27;curProcessUser&#x27;: &#x27;nobody&#x27;,
+                             &#x27;curProcessUserName&#x27;: None,
+                             &#x27;debtPrice&#x27;: 118.6,
+                             &#x27;delRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;deliver&#x27;: None,
+                             &#x27;deliverPlanTime&#x27;: None,
+                             &#x27;deliverPrice&#x27;: 0.0,
+                             &#x27;deliverSheetCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverSheetName&#x27;: None,
+                             &#x27;deliverStateCode&#x27;: &#x27;a&#x27;,
+                             &#x27;deliverType&#x27;: None,
+                             &#x27;deliverTypeCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverTypeName&#x27;: &#x27;&#x27;,
+                             &#x27;discountPrice&#x27;: 100.0,
+                             &#x27;discountno&#x27;: &#x27;&#x27;,
+                             &#x27;editionType&#x27;: None,
+                             &#x27;erpBarCode&#x27;: &#x27;&#x27;,
+                             &#x27;erpOrderFilePath&#x27;: &#x27;&#x27;,
+                             &#x27;flowCode&#x27;: None,
+                             &#x27;hasInner&#x27;: None,
+                             &#x27;id&#x27;: 2772225,
+                             &#x27;identification&#x27;: None,
+                             &#x27;ifSaveMember&#x27;: &#x27;551559.76&#x27;,
+                             &#x27;inToTime&#x27;: None,
+                             &#x27;innerOrder&#x27;: &#x27;0&#x27;,
+                             &#x27;intoTime&#x27;: None,
+                             &#x27;invoiceAddress&#x27;: None,
+                             &#x27;invoicePhone&#x27;: None,
+                             &#x27;invoiceRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;invoiceSheetCode&#x27;: None,
+                             &#x27;invoiceStatus&#x27;: None,
+                             &#x27;isAfterSale&#x27;: None,
+                             &#x27;isInvoice&#x27;: &#x27;0&#x27;,
+                             &#x27;isSave&#x27;: None,
+                             &#x27;isenable&#x27;: False,
+                             &#x27;lockOrder&#x27;: True,
+                             &#x27;lockTime&#x27;: None,
+                             &#x27;lookUp&#x27;: None,
+                             &#x27;matUseSheetList&#x27;: None,
+                             &#x27;materialType&#x27;: &#x27;02&#x27;,
+                             &#x27;mbrMember&#x27;: None,
+                             &#x27;memberCategoryCode&#x27;: &#x27;9AFE134358E1403B9D71B674590F43F2&#x27;,
+                             &#x27;memberCategoryName&#x27;: &#x27;粉丝&#x27;,
+                             &#x27;memberCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactLocation&#x27;: &#x27;&#x27;,
+                             &#x27;memberContactName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberContactPhone&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberLabel&#x27;: None,
+                             &#x27;memberName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberNo&#x27;: None,
+                             &#x27;name&#x27;: None,
+                             &#x27;ncSaleOutState&#x27;: &#x27;&#x27;,
+                             &#x27;notes&#x27;: &#x27;&#x27;,
+                             &#x27;odrOrderGoods&#x27;: None,
+                             &#x27;odrOrderGoodsName&#x27;: [&#x27;工厂名片&#x27;, &#x27;工厂名片&#x27;],
+                             &#x27;odrOrderGoodsNcs&#x27;: None,
+                             &#x27;odrOrderProcesses&#x27;: None,
+                             &#x27;orderClass&#x27;: &#x27;&#x27;,
+                             &#x27;orderDeliveryMethod&#x27;: &#x27;&#x27;,
+                             &#x27;orderLabel&#x27;: &#x27;&#x27;,
+                             &#x27;orderLeadTime&#x27;: None,
+                             &#x27;orderProject&#x27;: &#x27;&#x27;,
+                             &#x27;orderTask&#x27;: &#x27;&#x27;,
+                             &#x27;orderType&#x27;: &#x27;&#x27;,
+                             &#x27;outAssisitSheetCode&#x27;: None,
+                             &#x27;pageNum&#x27;: 1,
+                             &#x27;pageOffset&#x27;: 0,
+                             &#x27;pageSize&#x27;: 20,
+                             &#x27;paidPrice&#x27;: 0.0,
+                             &#x27;parentTenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;payInfoCode&#x27;: None,
+                             &#x27;payStateCode&#x27;: &#x27;k&#x27;,
+                             &#x27;payTime&#x27;: None,
+                             &#x27;payTimeString&#x27;: None,
+                             &#x27;payTypeCode&#x27;: None,
+                             &#x27;payTypeName&#x27;: None,
+                             &#x27;paymontwx&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeCode&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeColor&#x27;: None,
+                             &#x27;prdNodeInTime&#x27;: None,
+                             &#x27;prdNodeName&#x27;: None,
+                             &#x27;prdNodeUserCode&#x27;: None,
+                             &#x27;printNum&#x27;: 0,
+                             &#x27;processNodeCode&#x27;: &#x27;BC00D50F46FB46519A4AE7668FC56CBE&#x27;,
+                             &#x27;processNodeColor&#x27;: &#x27;#000000&#x27;,
+                             &#x27;processNodeName&#x27;: &#x27;前台&#x27;,
+                             &#x27;produceOrderCode&#x27;: None,
+                             &#x27;provisionalPaidPrice&#x27;: None,
+                             &#x27;provisionalPayStateCode&#x27;: None,
+                             &#x27;realPrice&#x27;: 118.6,
+                             &#x27;remarks&#x27;: &#x27;&#x27;,
+                             &#x27;salePrice&#x27;: 218.6,
+                             &#x27;savePerfFlag&#x27;: None,
+                             &#x27;saveTime&#x27;: None,
+                             &#x27;sellUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;sellUserName&#x27;: None,
+                             &#x27;sheetCode&#x27;: &#x27;2109295537CE&#x27;,
+                             &#x27;shopName&#x27;: None,
+                             &#x27;source&#x27;: &#x27;2&#x27;,
+                             &#x27;sourceName&#x27;: &#x27;线下订单&#x27;,
+                             &#x27;sourceTen&#x27;: &#x27;&#x27;,
+                             &#x27;storeCode&#x27;: None,
+                             &#x27;supplierCode&#x27;: None,
+                             &#x27;tenDeliverPrice&#x27;: None,
+                             &#x27;tenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;tenantName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;toNcSaleOrder&#x27;: None,
+                             &#x27;token&#x27;: None,
+                             &#x27;type&#x27;: None,
+                             &#x27;updateTime&#x27;: 1632880709485,
+                             &#x27;valid&#x27;: &#x27;1&#x27;,
+                             &#x27;vipOrder&#x27;: None,
+                             &#x27;vipPrice&#x27;: None,
+                             &#x27;writeOffPrice&#x27;: None},
+                            {&#x27;accountPrice&#x27;: 218.6,
+                             &#x27;accuracyNum&#x27;: &#x27;2&#x27;,
+                             &#x27;accuracyType&#x27;: &#x27;3&#x27;,
+                             &#x27;achvState&#x27;: &#x27;0&#x27;,
+                             &#x27;achvTime&#x27;: None,
+                             &#x27;achvUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;achvUserName&#x27;: &#x27;&#x27;,
+                             &#x27;actCouponCode&#x27;: None,
+                             &#x27;actCouponName&#x27;: None,
+                             &#x27;actCouponPrice&#x27;: None,
+                             &#x27;actDetails&#x27;: &#x27;优惠券::&#x27;,
+                             &#x27;actFullPrice&#x27;: None,
+                             &#x27;assistGoodsList&#x27;: None,
+                             &#x27;assistSheetCode&#x27;: None,
+                             &#x27;attachPath&#x27;: &#x27;&#x27;,
+                             &#x27;bankAccount&#x27;: None,
+                             &#x27;bankName&#x27;: None,
+                             &#x27;cmplTime&#x27;: None,
+                             &#x27;code&#x27;: &#x27;9A9B361241914A4997BB56ADEE07FFCC&#x27;,
+                             &#x27;createTime&#x27;: 1632878894480,
+                             &#x27;createTimeString&#x27;: None,
+                             &#x27;createUserCode&#x27;: &#x27;696382983EB7405EB67B39EC09A50329&#x27;,
+                             &#x27;createUserName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;curProcessNode&#x27;: &#x27;470657AD08704A8F99E7F807B988B3B3&#x27;,
+                             &#x27;curProcessNodeEndTime&#x27;: None,
+                             &#x27;curProcessUser&#x27;: &#x27;nobody&#x27;,
+                             &#x27;curProcessUserName&#x27;: None,
+                             &#x27;debtPrice&#x27;: 118.6,
+                             &#x27;delRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;deliver&#x27;: None,
+                             &#x27;deliverPlanTime&#x27;: None,
+                             &#x27;deliverPrice&#x27;: 0.0,
+                             &#x27;deliverSheetCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverSheetName&#x27;: None,
+                             &#x27;deliverStateCode&#x27;: &#x27;a&#x27;,
+                             &#x27;deliverType&#x27;: None,
+                             &#x27;deliverTypeCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverTypeName&#x27;: &#x27;&#x27;,
+                             &#x27;discountPrice&#x27;: 100.0,
+                             &#x27;discountno&#x27;: &#x27;&#x27;,
+                             &#x27;editionType&#x27;: None,
+                             &#x27;erpBarCode&#x27;: &#x27;&#x27;,
+                             &#x27;erpOrderFilePath&#x27;: &#x27;&#x27;,
+                             &#x27;flowCode&#x27;: None,
+                             &#x27;hasInner&#x27;: None,
+                             &#x27;id&#x27;: 2764315,
+                             &#x27;identification&#x27;: None,
+                             &#x27;ifSaveMember&#x27;: &#x27;551559.76&#x27;,
+                             &#x27;inToTime&#x27;: None,
+                             &#x27;innerOrder&#x27;: &#x27;0&#x27;,
+                             &#x27;intoTime&#x27;: None,
+                             &#x27;invoiceAddress&#x27;: None,
+                             &#x27;invoicePhone&#x27;: None,
+                             &#x27;invoiceRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;invoiceSheetCode&#x27;: None,
+                             &#x27;invoiceStatus&#x27;: None,
+                             &#x27;isAfterSale&#x27;: None,
+                             &#x27;isInvoice&#x27;: &#x27;0&#x27;,
+                             &#x27;isSave&#x27;: None,
+                             &#x27;isenable&#x27;: False,
+                             &#x27;lockOrder&#x27;: True,
+                             &#x27;lockTime&#x27;: None,
+                             &#x27;lookUp&#x27;: None,
+                             &#x27;matUseSheetList&#x27;: None,
+                             &#x27;materialType&#x27;: &#x27;02&#x27;,
+                             &#x27;mbrMember&#x27;: None,
+                             &#x27;memberCategoryCode&#x27;: &#x27;9AFE134358E1403B9D71B674590F43F2&#x27;,
+                             &#x27;memberCategoryName&#x27;: &#x27;粉丝&#x27;,
+                             &#x27;memberCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactLocation&#x27;: &#x27;&#x27;,
+                             &#x27;memberContactName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberContactPhone&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberLabel&#x27;: None,
+                             &#x27;memberName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberNo&#x27;: None,
+                             &#x27;name&#x27;: None,
+                             &#x27;ncSaleOutState&#x27;: &#x27;&#x27;,
+                             &#x27;notes&#x27;: &#x27;&#x27;,
+                             &#x27;odrOrderGoods&#x27;: None,
+                             &#x27;odrOrderGoodsName&#x27;: [&#x27;工厂名片&#x27;, &#x27;工厂名片&#x27;],
+                             &#x27;odrOrderGoodsNcs&#x27;: None,
+                             &#x27;odrOrderProcesses&#x27;: None,
+                             &#x27;orderClass&#x27;: &#x27;&#x27;,
+                             &#x27;orderDeliveryMethod&#x27;: &#x27;&#x27;,
+                             &#x27;orderLabel&#x27;: &#x27;&#x27;,
+                             &#x27;orderLeadTime&#x27;: None,
+                             &#x27;orderProject&#x27;: &#x27;&#x27;,
+                             &#x27;orderTask&#x27;: &#x27;&#x27;,
+                             &#x27;orderType&#x27;: &#x27;&#x27;,
+                             &#x27;outAssisitSheetCode&#x27;: None,
+                             &#x27;pageNum&#x27;: 1,
+                             &#x27;pageOffset&#x27;: 0,
+                             &#x27;pageSize&#x27;: 20,
+                             &#x27;paidPrice&#x27;: 0.0,
+                             &#x27;parentTenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;payInfoCode&#x27;: None,
+                             &#x27;payStateCode&#x27;: &#x27;k&#x27;,
+                             &#x27;payTime&#x27;: None,
+                             &#x27;payTimeString&#x27;: None,
+                             &#x27;payTypeCode&#x27;: None,
+                             &#x27;payTypeName&#x27;: None,
+                             &#x27;paymontwx&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeCode&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeColor&#x27;: None,
+                             &#x27;prdNodeInTime&#x27;: None,
+                             &#x27;prdNodeName&#x27;: None,
+                             &#x27;prdNodeUserCode&#x27;: None,
+                             &#x27;printNum&#x27;: 0,
+                             &#x27;processNodeCode&#x27;: &#x27;BC00D50F46FB46519A4AE7668FC56CBE&#x27;,
+                             &#x27;processNodeColor&#x27;: &#x27;#000000&#x27;,
+                             &#x27;processNodeName&#x27;: &#x27;前台&#x27;,
+                             &#x27;produceOrderCode&#x27;: None,
+                             &#x27;provisionalPaidPrice&#x27;: None,
+                             &#x27;provisionalPayStateCode&#x27;: None,
+                             &#x27;realPrice&#x27;: 118.6,
+                             &#x27;remarks&#x27;: &#x27;&#x27;,
+                             &#x27;salePrice&#x27;: 218.6,
+                             &#x27;savePerfFlag&#x27;: None,
+                             &#x27;saveTime&#x27;: None,
+                             &#x27;sellUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;sellUserName&#x27;: None,
+                             &#x27;sheetCode&#x27;: &#x27;2109296813C2&#x27;,
+                             &#x27;shopName&#x27;: None,
+                             &#x27;source&#x27;: &#x27;2&#x27;,
+                             &#x27;sourceName&#x27;: &#x27;线下订单&#x27;,
+                             &#x27;sourceTen&#x27;: &#x27;&#x27;,
+                             &#x27;storeCode&#x27;: None,
+                             &#x27;supplierCode&#x27;: None,
+                             &#x27;tenDeliverPrice&#x27;: None,
+                             &#x27;tenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;tenantName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;toNcSaleOrder&#x27;: None,
+                             &#x27;token&#x27;: None,
+                             &#x27;type&#x27;: None,
+                             &#x27;updateTime&#x27;: 1632879270037,
+                             &#x27;valid&#x27;: &#x27;1&#x27;,
+                             &#x27;vipOrder&#x27;: None,
+                             &#x27;vipPrice&#x27;: None,
+                             &#x27;writeOffPrice&#x27;: None},
+                            {&#x27;accountPrice&#x27;: 218.6,
+                             &#x27;accuracyNum&#x27;: &#x27;2&#x27;,
+                             &#x27;accuracyType&#x27;: &#x27;3&#x27;,
+                             &#x27;achvState&#x27;: &#x27;0&#x27;,
+                             &#x27;achvTime&#x27;: None,
+                             &#x27;achvUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;achvUserName&#x27;: &#x27;&#x27;,
+                             &#x27;actCouponCode&#x27;: None,
+                             &#x27;actCouponName&#x27;: None,
+                             &#x27;actCouponPrice&#x27;: None,
+                             &#x27;actDetails&#x27;: &#x27;优惠券::&#x27;,
+                             &#x27;actFullPrice&#x27;: None,
+                             &#x27;assistGoodsList&#x27;: None,
+                             &#x27;assistSheetCode&#x27;: None,
+                             &#x27;attachPath&#x27;: &#x27;&#x27;,
+                             &#x27;bankAccount&#x27;: None,
+                             &#x27;bankName&#x27;: None,
+                             &#x27;cmplTime&#x27;: None,
+                             &#x27;code&#x27;: &#x27;626D757D2A89491DAEFFD8C1E5726359&#x27;,
+                             &#x27;createTime&#x27;: 1632878596664,
+                             &#x27;createTimeString&#x27;: None,
+                             &#x27;createUserCode&#x27;: &#x27;696382983EB7405EB67B39EC09A50329&#x27;,
+                             &#x27;createUserName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;curProcessNode&#x27;: &#x27;6F844CF19EEC45FF8197B6D1365DB393&#x27;,
+                             &#x27;curProcessNodeEndTime&#x27;: None,
+                             &#x27;curProcessUser&#x27;: &#x27;nobody&#x27;,
+                             &#x27;curProcessUserName&#x27;: None,
+                             &#x27;debtPrice&#x27;: 118.6,
+                             &#x27;delRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;deliver&#x27;: None,
+                             &#x27;deliverPlanTime&#x27;: None,
+                             &#x27;deliverPrice&#x27;: 0.0,
+                             &#x27;deliverSheetCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverSheetName&#x27;: None,
+                             &#x27;deliverStateCode&#x27;: &#x27;a&#x27;,
+                             &#x27;deliverType&#x27;: None,
+                             &#x27;deliverTypeCode&#x27;: &#x27;&#x27;,
+                             &#x27;deliverTypeName&#x27;: &#x27;&#x27;,
+                             &#x27;discountPrice&#x27;: 100.0,
+                             &#x27;discountno&#x27;: &#x27;&#x27;,
+                             &#x27;editionType&#x27;: None,
+                             &#x27;erpBarCode&#x27;: &#x27;&#x27;,
+                             &#x27;erpOrderFilePath&#x27;: &#x27;&#x27;,
+                             &#x27;flowCode&#x27;: None,
+                             &#x27;hasInner&#x27;: None,
+                             &#x27;id&#x27;: 2764309,
+                             &#x27;identification&#x27;: None,
+                             &#x27;ifSaveMember&#x27;: &#x27;551559.76&#x27;,
+                             &#x27;inToTime&#x27;: None,
+                             &#x27;innerOrder&#x27;: &#x27;0&#x27;,
+                             &#x27;intoTime&#x27;: None,
+                             &#x27;invoiceAddress&#x27;: None,
+                             &#x27;invoicePhone&#x27;: None,
+                             &#x27;invoiceRemarks&#x27;: &#x27;&#x27;,
+                             &#x27;invoiceSheetCode&#x27;: None,
+                             &#x27;invoiceStatus&#x27;: None,
+                             &#x27;isAfterSale&#x27;: None,
+                             &#x27;isInvoice&#x27;: &#x27;0&#x27;,
+                             &#x27;isSave&#x27;: None,
+                             &#x27;isenable&#x27;: False,
+                             &#x27;lockOrder&#x27;: True,
+                             &#x27;lockTime&#x27;: None,
+                             &#x27;lookUp&#x27;: None,
+                             &#x27;matUseSheetList&#x27;: None,
+                             &#x27;materialType&#x27;: &#x27;02&#x27;,
+                             &#x27;mbrMember&#x27;: None,
+                             &#x27;memberCategoryCode&#x27;: &#x27;9AFE134358E1403B9D71B674590F43F2&#x27;,
+                             &#x27;memberCategoryName&#x27;: &#x27;粉丝&#x27;,
+                             &#x27;memberCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactCode&#x27;: &#x27;AEAD906B8A4C49619A95C12AF746CB5D&#x27;,
+                             &#x27;memberContactLocation&#x27;: &#x27;&#x27;,
+                             &#x27;memberContactName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberContactPhone&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberLabel&#x27;: None,
+                             &#x27;memberName&#x27;: &#x27;17852170964&#x27;,
+                             &#x27;memberNo&#x27;: None,
+                             &#x27;name&#x27;: None,
+                             &#x27;ncSaleOutState&#x27;: &#x27;&#x27;,
+                             &#x27;notes&#x27;: &#x27;&#x27;,
+                             &#x27;odrOrderGoods&#x27;: None,
+                             &#x27;odrOrderGoodsName&#x27;: [&#x27;工厂名片&#x27;, &#x27;工厂名片&#x27;],
+                             &#x27;odrOrderGoodsNcs&#x27;: None,
+                             &#x27;odrOrderProcesses&#x27;: None,
+                             &#x27;orderClass&#x27;: &#x27;&#x27;,
+                             &#x27;orderDeliveryMethod&#x27;: &#x27;&#x27;,
+                             &#x27;orderLabel&#x27;: &#x27;&#x27;,
+                             &#x27;orderLeadTime&#x27;: None,
+                             &#x27;orderProject&#x27;: &#x27;&#x27;,
+                             &#x27;orderTask&#x27;: &#x27;&#x27;,
+                             &#x27;orderType&#x27;: &#x27;&#x27;,
+                             &#x27;outAssisitSheetCode&#x27;: None,
+                             &#x27;pageNum&#x27;: 1,
+                             &#x27;pageOffset&#x27;: 0,
+                             &#x27;pageSize&#x27;: 20,
+                             &#x27;paidPrice&#x27;: 0.0,
+                             &#x27;parentTenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;payInfoCode&#x27;: None,
+                             &#x27;payStateCode&#x27;: &#x27;k&#x27;,
+                             &#x27;payTime&#x27;: None,
+                             &#x27;payTimeString&#x27;: None,
+                             &#x27;payTypeCode&#x27;: None,
+                             &#x27;payTypeName&#x27;: None,
+                             &#x27;paymontwx&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeCode&#x27;: &#x27;&#x27;,
+                             &#x27;prdNodeColor&#x27;: None,
+                             &#x27;prdNodeInTime&#x27;: None,
+                             &#x27;prdNodeName&#x27;: None,
+                             &#x27;prdNodeUserCode&#x27;: None,
+                             &#x27;printNum&#x27;: 0,
+                             &#x27;processNodeCode&#x27;: &#x27;BC00D50F46FB46519A4AE7668FC56CBE&#x27;,
+                             &#x27;processNodeColor&#x27;: &#x27;#000000&#x27;,
+                             &#x27;processNodeName&#x27;: &#x27;前台&#x27;,
+                             &#x27;produceOrderCode&#x27;: None,
+                             &#x27;provisionalPaidPrice&#x27;: None,
+                             &#x27;provisionalPayStateCode&#x27;: None,
+                             &#x27;realPrice&#x27;: 118.6,
+                             &#x27;remarks&#x27;: &#x27;&#x27;,
+                             &#x27;salePrice&#x27;: 218.6,
+                             &#x27;savePerfFlag&#x27;: None,
+                             &#x27;saveTime&#x27;: None,
+                             &#x27;sellUserCode&#x27;: &#x27;&#x27;,
+                             &#x27;sellUserName&#x27;: None,
+                             &#x27;sheetCode&#x27;: &#x27;210929761F5D&#x27;,
+                             &#x27;shopName&#x27;: None,
+                             &#x27;source&#x27;: &#x27;2&#x27;,
+                             &#x27;sourceName&#x27;: &#x27;线下订单&#x27;,
+                             &#x27;sourceTen&#x27;: &#x27;&#x27;,
+                             &#x27;storeCode&#x27;: None,
+                             &#x27;supplierCode&#x27;: None,
+                             &#x27;tenDeliverPrice&#x27;: None,
+                             &#x27;tenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;,
+                             &#x27;tenantName&#x27;: &#x27;高新体验店&#x27;,
+                             &#x27;toNcSaleOrder&#x27;: None,
+                             &#x27;token&#x27;: None,
+                             &#x27;type&#x27;: None,
+                             &#x27;updateTime&#x27;: 1632878767638,
+                             &#x27;valid&#x27;: &#x27;1&#x27;,
+                             &#x27;vipOrder&#x27;: None,
+                             &#x27;vipPrice&#x27;: None,
+                             &#x27;writeOffPrice&#x27;: None}],
+              &#x27;tenantCode&#x27;: &#x27;30BFC1098EEA4A75B04DDC003F62043E&#x27;}}
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2021-10-15 10:22:56,945 test_res.py test_002 INFO 原价为218.6，折价为118.6，现价为100.0
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_res.py:31 原价为218.6，折价为118.6，现价为100.0<br/></div></td></tr></tbody></table></body></html>

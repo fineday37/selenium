@@ -1,0 +1,18 @@
+200
+<class 'dict'>
+{'message': None,
+ 'result': True,
+ 'succeed': True,
+ 'userData': {'isSjky': True,
+              'mshopType': '2',
+              'privateKey': '',
+              'roles': '',
+              'tenantType': '02',
+              'userInfo': {'isweb': '前台权限',
+                           'realName': '高新体验店',
+                           'storeLogon': 'store',
+                           'token': 'cookie',
+                           'userId': '696382983EB7405EB67B39EC09A50329',
+                           'userName': 'suchangzhou',
+                           'weight': 1}}}
+<class 'dict'>

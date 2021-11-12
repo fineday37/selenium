@@ -1,0 +1,22 @@
+200
+<class 'dict'>
+{'message': None,
+ 'result': True,
+ 'succeed': True,
+ 'userData': {'isSjky': True,
+              'mshopType': '2',
+              'privateKey': '',
+              'roles': '',
+              'tenantType': '02',
+              'userInfo': {'isweb': '前台权限',
+                           'realName': '高新体验店',
+                           'storeLogon': 'store',
+                           'token': 'cookie',
+                           'userId': '696382983EB7405EB67B39EC09A50329',
+                           'userName': 'suchangzhou',
+                           'weight': 1}}}
+<class 'dict'>
+{'Cookie': {'JSESSIONID': '1BE4C17FE066EC5C2CF0E44629CF1631',
+            'logoUrl': 'a7cbf85bbea04bce961d774fbe48d8f4.jpg',
+            'realName': '%E9%AB%98%E6%96%B0%E4%BD%93%E9%AA%8C%E5%BA%97',
+            'storeName': '%E9%AB%98%E6%96%B0%E4%BD%93%E9%AA%8C%E5%BA%97'}}

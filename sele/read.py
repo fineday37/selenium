@@ -1,5 +1,5 @@
 import yaml
-import os
+# import os
 
 
 class Readyaml:
@@ -8,7 +8,7 @@ class Readyaml:
 
     def read_yaml(self):
         with open(self.yaml_name, 'r', encoding="utf-8") as f:
-            msxy_page = yaml.load(stream=f.read(), Loader=yaml.FullLoader)
+            msxy_page = yaml.load(stream=f.read(), Loader=yaml.Loader)
         return msxy_page
 
 

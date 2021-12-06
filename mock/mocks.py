@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "<h1>这是一个mock<h2>"
+    return '<h1><font size="8" color="red">这是一个mock</font><h1>'
 
 
 @app.route('/trade/purchase', methods=["post"])

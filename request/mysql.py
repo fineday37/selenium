@@ -1,13 +1,22 @@
+import json
+
 import pymysql
 
 conn = pymysql.connect(
-    host="192.168.108.128",
+    host="10.168.20.47",
     user="root",
-    password="123456",
-    database="zhuxian",
+    password="mysql",
+    database="dayu-dwd",
     charset="utf8"
 )
 cur = conn.cursor()
 
-cur.execute('select * from qingyun')
-print(cur.fetchmany(2))
+
+def datas():
+    cur.execute('select * from dwd_ord_di_after_sales_d')
+    return cur.fetchone()
+
+
+if __name__ == '__main__':
+    data = datas()
+    print(data)

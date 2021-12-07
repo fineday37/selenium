@@ -4,18 +4,26 @@ from request import res
 import allure
 import os
 from log.logs import loggings
+from request import mysql
 
 log1 = loggings()
 
 
+@pytest.fixture()
+def test1():
+    ll = mysql.datas()
+    return ll
+
+
 class Testpage:
     @allure.feature("登陆成功")
-    def test_001(self):
+    def test_001(self, test1):
         text = res.Request.requets(self)
         txt = text["userData"]["userInfo"]["realName"]
         try:
             assert txt == "高新体验店"
             log1.info("登录账号是{}".format(txt))
+            print(test1)
         except Exception as e:
             log1.error(e)
 

@@ -82,6 +82,7 @@ class Loginpage(BasePage):
     # 新增门店订单
 
     def news(self):
+        self.waiting(10)
         self.click(self.ll)
         self.click(self.an)
         self.click(self.goods)

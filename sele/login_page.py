@@ -1,5 +1,6 @@
 from selenium.webdriver.common.keys import Keys
 import time
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 def delay(time_):
@@ -11,7 +12,7 @@ class BasePage:
         self.driver = driver
 
     # 隐性等待
-    def Waiting(self, seconds):
+    def waiting(self, seconds):
         self.driver.implicitly_wait(seconds)
 
     # 获取url
@@ -53,3 +54,7 @@ class BasePage:
     # 刷新页面
     def re(self):
         self.driver.refresh()
+
+    # 双击事件
+    def double(self, loc):
+        ActionChains(self.driver).double_click(self.lacator(loc)).perform()

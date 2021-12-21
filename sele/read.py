@@ -13,7 +13,7 @@ class Readyaml:
 
 
 if __name__ == '__main__':
-    Readyaml('../sele/api.yaml').read_yaml()
+    print(Readyaml('../sele/api.yaml').read_yaml()[0]["name"]["xing"])
 # fs = open(os.getcwd() + "./api.yaml", encoding="UTF-8")
 # datas = yaml.load(fs)
 # print(datas)

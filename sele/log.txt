@@ -54,3 +54,718 @@
 2021-10-29 15:05:27,417 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
 2021-11-11 09:16:51,155 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
 2021-11-11 10:09:04,705 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 13:19:13,710 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 13:19:22,427 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-11-18 13:29:01,046 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/ul/div[1]/i"}
+  (Session info: chrome=95.0.4638.69)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008F0C43+2493507]
+	Ordinal0 [0x0088A4B1+2073777]
+	Ordinal0 [0x00792608+1058312]
+	Ordinal0 [0x007BCAA4+1231524]
+	Ordinal0 [0x007E6C62+1404002]
+	Ordinal0 [0x007D597A+1333626]
+	Ordinal0 [0x007E5038+1396792]
+	Ordinal0 [0x007D580B+1333259]
+	Ordinal0 [0x007B2314+1188628]
+	Ordinal0 [0x007B316F+1192303]
+	GetHandleVerifier [0x00A77BF6+1548950]
+	GetHandleVerifier [0x00B2461C+2256060]
+	GetHandleVerifier [0x0097C13B+518107]
+	GetHandleVerifier [0x0097B1E0+514176]
+	Ordinal0 [0x0088F53D+2094397]
+	Ordinal0 [0x00893418+2110488]
+	Ordinal0 [0x00893552+2110802]
+	Ordinal0 [0x0089CE81+2150017]
+	BaseThreadInitThunk [0x759FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77697A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77697A6E+238]
+
+2021-11-18 13:29:07,496 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 13:34:35,803 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/ul/div[1]/i"}
+  (Session info: chrome=95.0.4638.69)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008F0C43+2493507]
+	Ordinal0 [0x0088A4B1+2073777]
+	Ordinal0 [0x00792608+1058312]
+	Ordinal0 [0x007BCAA4+1231524]
+	Ordinal0 [0x007E6C62+1404002]
+	Ordinal0 [0x007D597A+1333626]
+	Ordinal0 [0x007E5038+1396792]
+	Ordinal0 [0x007D580B+1333259]
+	Ordinal0 [0x007B2314+1188628]
+	Ordinal0 [0x007B316F+1192303]
+	GetHandleVerifier [0x00A77BF6+1548950]
+	GetHandleVerifier [0x00B2461C+2256060]
+	GetHandleVerifier [0x0097C13B+518107]
+	GetHandleVerifier [0x0097B1E0+514176]
+	Ordinal0 [0x0088F53D+2094397]
+	Ordinal0 [0x00893418+2110488]
+	Ordinal0 [0x00893552+2110802]
+	Ordinal0 [0x0089CE81+2150017]
+	BaseThreadInitThunk [0x759FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77697A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77697A6E+238]
+
+2021-11-18 13:34:41,452 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 14:04:05,234 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 14:04:10,698 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-821a9ad6="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1229;">...</div>
+  (Session info: chrome=95.0.4638.69)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008F0C43+2493507]
+	Ordinal0 [0x0088A4B1+2073777]
+	Ordinal0 [0x00792608+1058312]
+	Ordinal0 [0x007C2B39+1256249]
+	Ordinal0 [0x007C0E78+1248888]
+	Ordinal0 [0x007BEC4D+1240141]
+	Ordinal0 [0x007BDA98+1235608]
+	Ordinal0 [0x007B3787+1193863]
+	Ordinal0 [0x007D5943+1333571]
+	Ordinal0 [0x007B35A6+1193382]
+	Ordinal0 [0x007D5A2A+1333802]
+	Ordinal0 [0x007E5038+1396792]
+	Ordinal0 [0x007D580B+1333259]
+	Ordinal0 [0x007B2314+1188628]
+	Ordinal0 [0x007B316F+1192303]
+	GetHandleVerifier [0x00A77BF6+1548950]
+	GetHandleVerifier [0x00B2461C+2256060]
+	GetHandleVerifier [0x0097C13B+518107]
+	GetHandleVerifier [0x0097B1E0+514176]
+	Ordinal0 [0x0088F53D+2094397]
+	Ordinal0 [0x00893418+2110488]
+	Ordinal0 [0x00893552+2110802]
+	Ordinal0 [0x0089CE81+2150017]
+	BaseThreadInitThunk [0x759FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77697A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77697A6E+238]
+
+2021-11-18 16:55:01,684 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 16:55:07,451 test_page.py test_003 ERROR Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-11-18 16:55:33,239 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 16:55:38,572 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-821a9ad6="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1121;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-11-18 16:57:30,320 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 16:57:36,396 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-821a9ad6="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1228;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-11-18 17:17:10,815 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 17:17:17,038 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-821a9ad6="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1121;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-11-18 17:20:05,504 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-11-18 17:20:15,464 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-01 11:20:21,510 test_page.py test_001 ERROR Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-02 14:10:59,529 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-02 14:11:14,005 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-03 15:25:04,418 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-03 15:25:09,948 test_page.py test_003 ERROR Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-03 15:30:10,838 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-03 15:30:16,046 test_page.py test_003 ERROR Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00270C43+2493507]
+	Ordinal0 [0x0020A4B1+2073777]
+	Ordinal0 [0x00112608+1058312]
+	Ordinal0 [0x00114D34+1068340]
+	Ordinal0 [0x00114BFE+1068030]
+	Ordinal0 [0x00114E60+1068640]
+	Ordinal0 [0x0013C7E8+1230824]
+	Ordinal0 [0x00166C62+1404002]
+	Ordinal0 [0x0015597A+1333626]
+	Ordinal0 [0x00165038+1396792]
+	Ordinal0 [0x0015580B+1333259]
+	Ordinal0 [0x00132314+1188628]
+	Ordinal0 [0x0013316F+1192303]
+	GetHandleVerifier [0x003F7BF6+1548950]
+	GetHandleVerifier [0x004A461C+2256060]
+	GetHandleVerifier [0x002FC13B+518107]
+	GetHandleVerifier [0x002FB1E0+514176]
+	Ordinal0 [0x0020F53D+2094397]
+	Ordinal0 [0x00213418+2110488]
+	Ordinal0 [0x00213552+2110802]
+	Ordinal0 [0x0021CE81+2150017]
+	BaseThreadInitThunk [0x76E1FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F77A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F77A6E+238]
+	(No symbol) [0x00000000]
+
+2021-12-03 15:34:20,457 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-03 15:34:29,116 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-792d61fa="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1131;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-03 15:38:36,918 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-03 15:38:46,068 test_page.py test_003 ERROR Message: element click intercepted: Element <span data-v-792d61fa="" class="add-goods-btn">...</span> is not clickable at point (418, 444). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1131;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-03 17:34:26,399 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-03 17:34:33,021 test_page.py test_003 ERROR 'ActionChains' object has no attribute 'perdorm'
+2021-12-06 09:01:53,920 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:02:04,043 test_page.py test_003 ERROR assert '' == '测试规格'
+2021-12-06 09:03:16,625 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:03:26,827 test_page.py test_003 ERROR assert '' == '测试规格'
+2021-12-06 09:22:15,665 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:22:27,819 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 09:29:18,236 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:29:32,681 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 09:45:24,572 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:45:36,725 test_page.py test_003 ERROR Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="app"]/div/div[2]/section/div/div[1]/div/div[3]/button[2]" because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[3]/button[2]"' is not a valid XPath expression.
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-06 09:48:11,157 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:48:23,494 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 09:50:04,761 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:50:19,967 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 09:53:39,906 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 09:54:03,635 test_page.py test_003 ERROR Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00940C43+2493507]
+	Ordinal0 [0x008DA4B1+2073777]
+	Ordinal0 [0x007E24D0+1058000]
+	Ordinal0 [0x007D7604+1013252]
+	Ordinal0 [0x007D7E06+1015302]
+	Ordinal0 [0x007D94D5+1021141]
+	Ordinal0 [0x007D35E3+996835]
+	Ordinal0 [0x007E3820+1062944]
+	Ordinal0 [0x008347D2+1394642]
+	Ordinal0 [0x0082580B+1333259]
+	Ordinal0 [0x00802314+1188628]
+	Ordinal0 [0x0080316F+1192303]
+	GetHandleVerifier [0x00AC7BF6+1548950]
+	GetHandleVerifier [0x00B7461C+2256060]
+	GetHandleVerifier [0x009CC13B+518107]
+	GetHandleVerifier [0x009CB1E0+514176]
+	Ordinal0 [0x008DF53D+2094397]
+	Ordinal0 [0x008E3418+2110488]
+	Ordinal0 [0x008E3552+2110802]
+	Ordinal0 [0x008ECE81+2150017]
+	BaseThreadInitThunk [0x76E1FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F77A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F77A6E+238]
+
+2021-12-06 15:44:30,233 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 15:44:45,627 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 15:44:45,725 test_page.py test_oo4 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-06 15:46:54,760 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 15:47:10,100 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 15:47:13,746 test_page.py test_oo4 ERROR assert '211206D8C7B2' == ''
+2021-12-06 15:51:13,454 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 15:51:29,056 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 15:51:44,601 test_page.py test_oo4 ERROR list index out of range
+2021-12-06 16:13:58,759 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 16:14:14,292 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 16:14:22,915 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-06 16:15:37,234 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 16:15:52,746 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 16:16:08,259 test_page.py test_oo4 ERROR list index out of range
+2021-12-06 16:31:53,291 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 16:32:11,208 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 16:32:27,497 test_page.py test_oo4 ERROR list index out of range
+2021-12-06 16:33:56,618 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-06 16:34:13,495 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-06 16:34:28,981 test_page.py test_oo4 ERROR list index out of range
+2021-12-07 11:19:27,896 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-07 11:19:44,873 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-07 11:19:59,532 test_page.py test_oo4 ERROR list index out of range
+2021-12-07 16:04:10,332 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-07 16:04:25,695 test_page.py test_003 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x00752608+1058312]
+	Ordinal0 [0x0073C026+966694]
+	Ordinal0 [0x00797DF9+1342969]
+	Ordinal0 [0x007A4792+1394578]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-07 16:04:25,700 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x00752608+1058312]
+	Ordinal0 [0x0073C026+966694]
+	Ordinal0 [0x00797DF9+1342969]
+	Ordinal0 [0x007A4792+1394578]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-07 16:04:49,836 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-07 16:05:09,893 test_page.py test_003 INFO 新建商品成功,商品名称为测试规格
+2021-12-07 16:05:14,559 test_page.py test_oo4 ERROR assert '2112075B437B' == ''
+  + 2112075B437B
+2021-12-08 09:02:01,620 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-08 09:02:16,679 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x007524D0+1058000]
+	Ordinal0 [0x0077D914+1235220]
+	Ordinal0 [0x00773787+1193863]
+	Ordinal0 [0x00795943+1333571]
+	Ordinal0 [0x007735A6+1193382]
+	Ordinal0 [0x00795A2A+1333802]
+	Ordinal0 [0x007A5038+1396792]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-08 09:02:17,755 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListOrder" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1133;">...</div>
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x00752608+1058312]
+	Ordinal0 [0x00782B39+1256249]
+	Ordinal0 [0x00780E78+1248888]
+	Ordinal0 [0x0077EC4D+1240141]
+	Ordinal0 [0x0077DA98+1235608]
+	Ordinal0 [0x00773787+1193863]
+	Ordinal0 [0x00795943+1333571]
+	Ordinal0 [0x007735A6+1193382]
+	Ordinal0 [0x00795A2A+1333802]
+	Ordinal0 [0x007A5038+1396792]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-08 09:03:02,179 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-08 09:03:33,851 test_page.py test_003 ERROR Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-08 09:03:45,886 test_page.py test_oo4 ERROR Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-08 11:27:56,309 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-08 11:28:11,725 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-08 11:28:12,791 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListOrder" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1137;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 09:16:35,988 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 09:16:46,410 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div[3]/div/button"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 09:16:57,868 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-09 09:17:40,716 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 09:17:46,956 test_page.py test_003 ERROR 'NoneType' object has no attribute 'click'
+2021-12-09 09:17:46,985 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 09:22:02,845 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 09:22:13,290 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div[3]/div/button"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 09:22:18,147 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-09 10:01:07,499 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:01:17,871 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div[3]/div/button"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:01:22,665 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-09 10:02:06,112 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:02:15,710 test_page.py test_003 ERROR 'NoneType' object has no attribute 'click'
+2021-12-09 10:02:15,717 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:04:12,389 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:04:22,888 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div[3]/div/button"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:04:27,058 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-09 10:06:16,579 test_page.py test_001 ERROR 'NoneType' object has no attribute 'text'
+2021-12-09 10:06:16,585 test_page.py test_003 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:06:16,591 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:06:29,611 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:06:46,650 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"css selector","selector":".ivu-table-body .ivu-table-row .ivu-table-column-center .ivu-table-cell .ivu-tag-text"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:06:47,724 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1131;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:07:52,817 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:08:10,428 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"css selector","selector":".ivu-table-body .ivu-table-row .ivu-table-column-center .ivu-table-cell .ivu-tag-text"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:08:15,649 test_page.py test_oo4 ERROR 'NoneType' object is not subscriptable
+2021-12-09 10:12:27,221 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:12:50,661 test_page.py test_003 ERROR 'NoneType' object is not subscriptable
+2021-12-09 10:12:50,667 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:43:48,595 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:44:07,623 test_page.py test_003 ERROR list index out of range
+2021-12-09 10:44:08,706 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1198;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:47:49,371 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:48:08,608 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[55]/div[2]/div/div/div[2]/div[2]/div[2]/ul/li/div"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:48:09,697 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1189;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 10:50:49,934 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 10:51:14,069 test_page.py test_003 ERROR list index out of range
+2021-12-09 10:51:15,140 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1189;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:02:12,339 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:02:21,695 test_page.py test_003 ERROR Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:02:22,839 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1197;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:04:04,955 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:04:13,653 test_page.py test_003 ERROR Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:04:14,808 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1191;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:07:16,770 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:07:35,650 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"css selector","selector":".ky-modal-goods.ivu-menu.ivu-menu-light.ivu-menu-vertical .ivu-menu-submenu-titlee"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:07:36,720 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1189;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:08:24,956 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:08:45,183 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"css selector","selector":".ky-modal-goods.ivu-menu.ivu-menu-light.ivu-menu-vertical .ivu-menu-submenu-titlee"}
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:08:46,250 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListAssist" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1189;">...</div>
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:10:54,764 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:11:15,280 test_page.py test_003 ERROR assert '古韵文化产品' == '测试规格'
+2021-12-09 11:11:22,722 test_page.py test_oo4 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-09 11:20:48,049 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:21:13,918 test_page.py test_003 ERROR list index out of range
+2021-12-09 11:21:16,403 test_page.py test_oo4 ERROR 'cod'
+2021-12-09 11:22:14,369 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:22:34,769 test_page.py test_003 ERROR assert '古韵文化产品' == '测试规格'
+2021-12-09 11:22:50,969 test_page.py test_oo4 ERROR list index out of range
+2021-12-09 11:26:44,703 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:27:10,215 test_page.py test_003 ERROR list index out of range
+2021-12-09 11:27:12,779 test_page.py test_oo4 ERROR 'cod'
+2021-12-09 11:27:32,656 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:27:58,375 test_page.py test_003 ERROR list index out of range
+2021-12-09 11:28:00,916 test_page.py test_oo4 ERROR 'cod'
+2021-12-09 11:30:29,174 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 11:30:50,049 test_page.py test_003 INFO 新建商品成功,商品名称为古韵文化产品
+2021-12-09 11:31:05,729 test_page.py test_oo4 ERROR list index out of range
+2021-12-09 13:54:58,477 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 13:55:24,209 test_page.py test_003 ERROR list index out of range
+2021-12-09 13:55:27,396 test_page.py test_oo4 ERROR 'cod'
+2021-12-09 14:15:56,207 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 14:16:12,272 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x007524D0+1058000]
+	Ordinal0 [0x0077D914+1235220]
+	Ordinal0 [0x00773787+1193863]
+	Ordinal0 [0x00795943+1333571]
+	Ordinal0 [0x007735A6+1193382]
+	Ordinal0 [0x00795A2A+1333802]
+	Ordinal0 [0x007A5038+1396792]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-09 14:16:13,344 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListOrder" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1121;">...</div>
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x00752608+1058312]
+	Ordinal0 [0x00782B39+1256249]
+	Ordinal0 [0x00780E78+1248888]
+	Ordinal0 [0x0077EC4D+1240141]
+	Ordinal0 [0x0077DA98+1235608]
+	Ordinal0 [0x00773787+1193863]
+	Ordinal0 [0x00795943+1333571]
+	Ordinal0 [0x007735A6+1193382]
+	Ordinal0 [0x00795A2A+1333802]
+	Ordinal0 [0x007A5038+1396792]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-09 14:22:26,196 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 14:22:41,859 test_page.py test_003 ERROR list index out of range
+2021-12-09 14:22:41,897 test_page.py test_oo4 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x008B0C43+2493507]
+	Ordinal0 [0x0084A4B1+2073777]
+	Ordinal0 [0x00752608+1058312]
+	Ordinal0 [0x0073C026+966694]
+	Ordinal0 [0x00797DF9+1342969]
+	Ordinal0 [0x007A4792+1394578]
+	Ordinal0 [0x0079580B+1333259]
+	Ordinal0 [0x00772314+1188628]
+	Ordinal0 [0x0077316F+1192303]
+	GetHandleVerifier [0x00A37BF6+1548950]
+	GetHandleVerifier [0x00AE461C+2256060]
+	GetHandleVerifier [0x0093C13B+518107]
+	GetHandleVerifier [0x0093B1E0+514176]
+	Ordinal0 [0x0084F53D+2094397]
+	Ordinal0 [0x00853418+2110488]
+	Ordinal0 [0x00853552+2110802]
+	Ordinal0 [0x0085CE81+2150017]
+	BaseThreadInitThunk [0x7632FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x76F87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x76F87A6E+238]
+
+2021-12-09 14:24:48,899 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 14:25:09,594 test_page.py test_003 INFO 新建商品成功,商品名称为古韵文化产品
+2021-12-09 14:25:26,072 test_page.py test_oo4 ERROR list index out of range
+2021-12-09 15:47:46,896 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-09 15:48:12,556 test_page.py test_003 ERROR list index out of range
+2021-12-09 15:48:15,928 test_page.py test_oo4 ERROR 'cod'
+2021-12-14 17:00:58,485 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-14 17:01:09,070 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div[3]/div/button"}
+  (Session info: chrome=96.0.4664.93)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-14 17:01:11,156 test_page.py test_oo4 ERROR 'cod'
+2021-12-14 17:04:46,533 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-14 17:04:58,314 test_page.py test_003 ERROR list index out of range
+2021-12-14 17:04:59,392 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1252;">...</div>
+  (Session info: chrome=96.0.4664.93)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 09:39:20,610 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 09:39:32,391 test_page.py test_003 ERROR list index out of range
+2021-12-21 09:39:33,475 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1253;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:28:39,614 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 10:29:01,330 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:29:02,431 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1256;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:35:26,217 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 10:35:48,447 test_page.py test_003 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:35:49,516 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1259;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:47:55,782 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 10:48:09,911 test_page.py test_003 ERROR Message: element click intercepted: Element <button data-v-1dc44bdd="" type="button" class="ivu-btn ivu-btn-primary">...</button> is not clickable at point (1074, 703). Other element would receive the click: <div data-v-7eff8c12="">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 10:48:11,044 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1251;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:05:23,184 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 11:05:37,164 test_page.py test_003 ERROR Message: element click intercepted: Element <button data-v-1dc44bdd="" type="button" class="ivu-btn ivu-btn-primary">...</button> is not clickable at point (1074, 703). Other element would receive the click: <div data-v-7eff8c12="">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:05:38,267 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1258;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:12:02,687 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 11:12:16,551 test_page.py test_003 ERROR Message: element click intercepted: Element <button data-v-1dc44bdd="" type="button" class="ivu-btn ivu-btn-primary">...</button> is not clickable at point (1074, 703). Other element would receive the click: <div data-v-7eff8c12="">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:12:17,627 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrNewOrder" target="_self" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected" style="padding-left: 43px;">...</a> is not clickable at point (76, 293). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1255;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:12:54,875 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 11:13:13,939 test_page.py test_003 ERROR assert '工厂名片' == '古韵文化产品'
+2021-12-21 11:13:16,136 test_page.py test_oo4 ERROR Message: element not interactable
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 11:15:04,119 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 11:15:23,304 test_page.py test_003 ERROR assert '工厂名片' == '古韵文化产品'
+2021-12-21 11:15:39,243 test_page.py test_oo4 ERROR list index out of range
+2021-12-21 11:40:00,011 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 11:40:19,061 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 11:40:34,851 test_page.py test_oo4 ERROR list index out of range
+2021-12-21 14:06:00,663 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 14:06:19,760 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 14:06:24,997 test_page.py test_oo4 ERROR assert '21122137FF19' == ''
+2021-12-21 14:11:37,652 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 14:11:56,534 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 14:12:01,827 test_page.py test_oo4 ERROR assert '211221F09D32' == ''
+2021-12-21 14:13:18,012 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 14:13:37,309 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 14:13:42,524 test_page.py test_oo4 ERROR assert '21122107B5B0' == ''
+2021-12-21 14:30:37,608 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 14:30:55,321 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 14:31:00,627 test_page.py test_oo4 ERROR 'cod'
+2021-12-21 14:33:49,355 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 14:34:06,678 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 14:34:11,921 test_page.py test_oo4 ERROR assert '21122113B3C6' == ''
+2021-12-21 15:10:55,650 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 15:11:14,682 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 15:11:20,897 test_page.py test_oo4 INFO 查询成功，订单号是211221C15B7E,商品是工厂名片

@@ -2,7 +2,7 @@ from selenium import webdriver
 from sele.login_page import BasePage
 from selenium.webdriver.common.by import By
 import time
-
+from selenium.webdriver.common.keys import Keys
 
 # wb = webserver.Chrome(r'C:\chromedriver.exe')
 # wb.get("http://www.baidu.com")
@@ -14,22 +14,31 @@ class Loginpage(BasePage):
     txt = (By.XPATH, '//*[@id="app"]/div/div[2]/section/div/div[1]/div[2]/div[2]/div[1]/div/div')
     text = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div/span')
     ll = (By.XPATH, '//*[@id="app"]/div/div[2]/ul/div[1]/i')
-    goods = (By.XPATH, '//*[@id="app"]/div/div[1]/div/div[1]/ul/div/li[1]/ul/a[4]')
+    goods = (By.XPATH, '//*[@id="app"]/div/div[1]/div/div[1]/ul/div/li[1]/ul/a[4]/span')
     business = (By.XPATH, '//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[1]/div/div[1]/div['
                           '3]/div/button')
     an = (By.XPATH, '//*[@id="app"]/div/div[1]/div/div[1]/ul/div/li[1]/div/i[2]')
-    new = (By.CSS_SELECTOR, '.ivu-modal-content [placeholder="请输入关键字搜索"]')
-    classification = (By.CSS_SELECTOR, '.search-btn.ivu-btn.ivu-btn-primary.ivu-btn-icon-only')
-    product = (By.CSS_SELECTOR, '.ivu-table-body .ivu-table-row .ivu-table-cell')
+    new = (By.CSS_SELECTOR, '.ivu-select-selection [placeholder="请输入关键字进行搜索"]')
+    classification = (By.CSS_SELECTOR, '.ivu-modal-header .ivu-select-dropdown .ivu-select-dropdown-list')
+    product = (By.CSS_SELECTOR, '.ivu-table-body .ivu-table-row .ivu-table-column-center .ivu-table-cell')
     newss = (
         By.XPATH, '//*[@id="app"]/div/div[2]/section/div/div[1]/div/div[1]/form/div[2]/div[2]/div[1]/div/div[2]/span')
-    nc = (By.CSS_SELECTOR, '.ky-modal-menu-wrap .ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected ')
-    banner = (By.CSS_SELECTOR, '.ky-modal-goods.ivu-menu.ivu-menu-light.ivu-menu-vertical li')
+    culture = '.ky-modal-menu-wrap.ivu-menu.ivu-menu-light.ivu-menu-vertical li'
+    banner = '.ky-modal-goods.ivu-menu.ivu-menu-light.ivu-menu-vertical .ivu-menu-submenu'
     speci = (By.XPATH, '.ivu-menu-item .ivu-btn.ivu-btn-dashed.ivu-btn-small')
-    tt = ".ivu-menu-item .ivu-btn.ivu-btn-dashed.ivu-btn-small"
+    tt = ".ivu-btn.ivu-btn-dashed.ivu-btn-small"
+    save = (By.CSS_SELECTOR, '.ky-wrap-foot .ivu-btn.ivu-btn-primary')
+    stores = ".vue-scroller-bars-content .ivu-menu-submenu .ivu-menu .ivu-menu-item"
+    coding = {}
+    search = '.ky-form-split .ivu-form-item-content [type="text"]'
+    Query_button = '.ky-form-split .ivu-form-item-content [type="button"]'
+    Verification_code = ".ivu-table-row .ivu-table-column-center .ivu-table-cell"
+    Serial = {}
+
+    # 登录
 
     def login(self, user, passwd):
-        self.Waiting(10)
+        self.waiting(10)
         self.open(self.url)
         self.input(self.user, user)
         self.input(self.but, passwd)
@@ -41,8 +50,10 @@ class Loginpage(BasePage):
         text = self.lacator(self.txt).text
         return text
 
+    # 登录无效等价类
+
     def logins(self, user, passwd):
-        self.Waiting(10)
+        self.waiting(10)
         self.open(self.url)
         self.max()
         if user is not None:
@@ -55,6 +66,21 @@ class Loginpage(BasePage):
         self.quit()
         return txt
 
+    # 门店订单查询
+
+    def query(self):
+        self.waiting(10)
+        self.plural(self.stores, 4).click()
+        time.sleep(2)
+        self.plural(self.search, 0).send_keys(Keys.CONTROL, "v")
+        self.plural(self.Query_button, 0).click()
+        time.sleep(2)
+        text = self.plural(self.Verification_code, 7).text
+        self.Serial["jean"] = self.plural(self.Verification_code, 3).text
+        return text
+
+    # 新增门店订单
+
     def news(self):
         self.click(self.ll)
         self.click(self.an)
@@ -64,22 +90,25 @@ class Loginpage(BasePage):
         self.input(self.new, "17852170964")
         time.sleep(2)
         self.click(self.classification)
-        time.sleep(1)
-        self.click(self.product)
+        time.sleep(2)
+        # 鼠标双击
+        self.double(self.product)
         time.sleep(1)
         self.click(self.newss)
-        self.click(self.nc)
-        self.click(self.banner)
         time.sleep(1)
-        self.plural(self.tt, 6).click()
-        # self.driver.find_elements_by_css_selector('.ivu-menu-item .ivu-btn.ivu-btn-dashed.ivu-btn-small')[6].click()
-        self.plural(self.tt, 1).click()
-        # self.driver.find_elements_by_css_selector('.ivu-menu-item .ivu-btn.ivu-btn-dashed.ivu-btn-small')[1].click()
+        self.plural(self.culture, 1).click()
         time.sleep(1)
-        self.plural(self.tt, 3).click()
-        # self.driver.find_elements_by_css_selector('.ivu-menu-item .ivu-btn.ivu-btn-dashed.ivu-btn-small')[3].click()
+        self.plural(self.banner, 7).click()
+        time.sleep(1)
+        # self.plural(self.tt, 12).click()
+        # time.sleep(1)
         self.driver.find_elements_by_css_selector('.ivu-btn.ivu-btn-primary')[14].click()
+        time.sleep(2)
         txt = self.driver.find_elements_by_css_selector('.ivu-table-column-center .ivu-table-cell div span')[0].text
+        self.click(self.save)
+        time.sleep(3)
+        self.coding["cod"] = self.plural('.ivu-table-column-center .ivu-table-cell div span', 0).text
+        self.plural('.ivu-form-item-content [type="button"]', 0).click()
         return txt
 
 

@@ -8,6 +8,7 @@ import pprint
 class Request:
     s = {}
 
+    # 登录并获取cookie
     def requets(self):
         method = "post"
         url = "http://10.168.20.17:8081/logon/doLogin.do"
@@ -27,6 +28,7 @@ class Request:
         pprint.pprint(Request.s)
         return res.json()
 
+    # 订单查询
     def query(self):
         method = "post"
         url = "http://10.168.20.17:8081/odr/order/sheet/queryOrderList.do"
@@ -59,4 +61,3 @@ if __name__ == '__main__':
     Request().requets()
     Request().query()
     print(Request().s)
-

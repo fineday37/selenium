@@ -1,7 +1,7 @@
 import json
 
 import pymysql
-
+import pprint
 conn = pymysql.connect(
     host="10.168.20.47",
     user="root",
@@ -14,9 +14,9 @@ cur = conn.cursor()
 
 def datas():
     cur.execute('select * from dwd_ord_di_after_sales_d')
-    return cur.fetchone()
+    return cur.fetchone()[3]
 
 
 if __name__ == '__main__':
     data = datas()
-    print(data)
+    pprint.pprint(data)

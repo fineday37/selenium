@@ -5,7 +5,8 @@ import allure
 import os
 from log.logs import loggings
 from request import mysql
-
+from sele.read import Readyaml
+case = Readyaml("../sele/api.yaml").read_yaml()
 log1 = loggings()
 
 
@@ -17,11 +18,16 @@ def test1():
 
 class Testpage:
     @allure.feature("登陆成功")
-    def test_001(self, test1):
-        text = res.Request.requets(self)
+    @pytest.mark.parametrize("arg",case)
+    def test_001(self, test1,arg):
+        url = arg["url"]
+        method = arg["method"]
+        data = arg["name"]
+        stores = arg["stores"]
+        text = res.Request.requets(self, url,method,data)
         txt = text["userData"]["userInfo"]["realName"]
         try:
-            assert txt == "高新体验店"
+            assert txt == stores
             log1.info("登录账号是{}".format(txt))
             print(test1)
         except Exception as e:

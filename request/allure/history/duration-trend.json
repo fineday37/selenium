@@ -1,0 +1,78 @@
+[ {
+  "buildOrder" : 60,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/60/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 778
+  }
+}, {
+  "buildOrder" : 59,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/59/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 672
+  }
+}, {
+  "buildOrder" : 58,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/58/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 570
+  }
+}, {
+  "buildOrder" : 57,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/57/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 596
+  }
+}, {
+  "buildOrder" : 56,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/56/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 628
+  }
+}, {
+  "buildOrder" : 55,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/55/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 649
+  }
+}, {
+  "buildOrder" : 54,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/54/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 632
+  }
+}, {
+  "buildOrder" : 53,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/53/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 631
+  }
+}, {
+  "buildOrder" : 52,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/52/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 590
+  }
+}, {
+  "buildOrder" : 51,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/51/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 597
+  }
+}, {
+  "buildOrder" : 50,
+  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/50/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 642
+  }
+} ]

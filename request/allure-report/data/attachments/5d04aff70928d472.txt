@@ -1,0 +1,1 @@
+INFO     root:test_res.py:25 登录账号是高新体验店

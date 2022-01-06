@@ -1,0 +1,47 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "登陆成功",
+    "children" : [ {
+      "name" : "test_001",
+      "uid" : "597f84ce1afac391",
+      "parentUid" : "02c1e025567b70de32d0b005eabc6d02",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639641144591,
+        "stop" : 1639641144662,
+        "duration" : 71
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 13,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "02c1e025567b70de32d0b005eabc6d02"
+  }, {
+    "name" : "查询成功",
+    "children" : [ {
+      "name" : "test_002",
+      "uid" : "891ba14370e611f4",
+      "parentUid" : "e0e7ef2d5fb6b493ffb5c05a4a92a4bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639641144665,
+        "stop" : 1639641145449,
+        "duration" : 784
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 13,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e0e7ef2d5fb6b493ffb5c05a4a92a4bb"
+  } ]
+}

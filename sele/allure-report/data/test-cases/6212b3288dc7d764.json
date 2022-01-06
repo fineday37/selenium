@@ -1,0 +1,132 @@
+{
+  "uid" : "6212b3288dc7d764",
+  "name" : "test_003",
+  "fullName" : "test_page.TestPage#test_003",
+  "historyId" : "eb33aca1a10aac4ac1f24bccbc10653d",
+  "time" : {
+    "start" : 1640077399263,
+    "stop" : 1640077416832,
+    "duration" : 17569
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestPage",
+    "time" : {
+      "start" : 1640077388951,
+      "stop" : 1640077390456,
+      "duration" : 1505
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "463b8d5f898eb76",
+      "name" : "log",
+      "source" : "463b8d5f898eb76.txt",
+      "type" : "text/plain",
+      "size" : 76
+    }, {
+      "uid" : "b7752484128220b8",
+      "name" : "stderr",
+      "source" : "b7752484128220b8.txt",
+      "type" : "text/plain",
+      "size" : 98
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestPage::0",
+    "time" : {
+      "start" : 1640077421762,
+      "stop" : 1640077426183,
+      "duration" : 4421
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "添加商品成功"
+  }, {
+    "name" : "suite",
+    "value" : "test_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPage"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-GU9TQVP5"
+  }, {
+    "name" : "thread",
+    "value" : "16996-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "315f3df3a06df181",
+        "reportUrl" : "http://10.168.20.111:8080/job/ui%E8%87%AA%E5%8A%A8%E5%8C%96/5/allure/#testresult/315f3df3a06df181",
+        "status" : "passed",
+        "time" : {
+          "start" : 1640071948064,
+          "stop" : 1640071965976,
+          "duration" : 17912
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6212b3288dc7d764.json",
+  "parameterValues" : [ ]
+}

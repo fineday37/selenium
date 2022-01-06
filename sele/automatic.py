@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.common.keys import Keys
 
+
 # wb = webserver.Chrome(r'C:\chromedriver.exe')
 # wb.get("http://www.baidu.com")
 class Loginpage(BasePage):
@@ -11,7 +12,7 @@ class Loginpage(BasePage):
     user = (By.XPATH, '//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input')
     but = (By.XPATH, '//*[@id="app"]/div/form/div/div[2]/div[5]/div/div/div/input')
     clack = (By.XPATH, '//*[@id="app"]/div/form/div/div[2]/button')
-    txt = (By.XPATH, '//*[@id="app"]/div/div[2]/section/div/div[1]/div[2]/div[2]/div[1]/div/div')
+    txt = (By.XPATH, '//*[@id="app"]/div/div[1]/div/div[1]/div[1]')
     text = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div/span')
     ll = (By.XPATH, '//*[@id="app"]/div/div[2]/ul/div[1]/i')
     goods = (By.XPATH, '//*[@id="app"]/div/div[1]/div/div[1]/ul/div/li[1]/ul/a[4]/span')

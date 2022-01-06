@@ -769,3 +769,145 @@ Backtrace:
 2021-12-21 15:10:55,650 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
 2021-12-21 15:11:14,682 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
 2021-12-21 15:11:20,897 test_page.py test_oo4 INFO 查询成功，订单号是211221C15B7E,商品是工厂名片
+2021-12-21 16:44:12,864 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 16:44:28,336 test_page.py test_003 ERROR Message: element click intercepted: Element <button data-v-1dc44bdd="" type="button" class="ivu-btn ivu-btn-primary">...</button> is not clickable at point (1074, 703). Other element would receive the click: <div data-v-7eff8c12="">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 16:44:29,412 test_page.py test_oo4 ERROR Message: element click intercepted: Element <a href="/odr/odrListOrder" target="_self" class="ivu-menu-item" style="padding-left: 43px;">...</a> is not clickable at point (76, 334). Other element would receive the click: <div class="ivu-modal-wrap" style="z-index: 1254;">...</div>
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2021-12-21 16:45:03,616 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 16:45:21,598 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 16:45:26,660 test_page.py test_oo4 INFO 查询成功，订单号是2112212870DF,商品是工厂名片
+2021-12-21 17:00:04,278 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 17:00:21,310 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 17:00:26,260 test_page.py test_oo4 INFO 查询成功，订单号是211221A1B70C,商品是工厂名片
+2021-12-21 17:03:19,257 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-21 17:03:36,830 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-21 17:03:41,760 test_page.py test_oo4 INFO 查询成功，订单号是2112215FCD40,商品是工厂名片
+2021-12-22 08:53:53,926 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-22 08:54:11,358 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-22 08:54:16,248 test_page.py test_oo4 INFO 查询成功，订单号是2112225B6321,商品是工厂名片
+2021-12-31 16:50:46,710 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2021-12-31 16:51:05,190 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2021-12-31 16:51:10,435 test_page.py test_oo4 INFO 查询成功，订单号是211231DBD4A9,商品是工厂名片
+2022-01-06 10:20:27,536 test_page.py test_001 ERROR list indices must be integers or slices, not str
+2022-01-06 10:20:27,699 test_page.py test_001 ERROR list indices must be integers or slices, not str
+2022-01-06 10:31:36,550 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 10:31:36,839 test_page.py test_001 ERROR 'name'
+2022-01-06 10:31:37,039 test_page.py test_001 ERROR 'name'
+2022-01-06 10:31:37,194 test_page.py test_001 ERROR 'name'
+2022-01-06 10:31:48,130 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 10:31:48,304 test_page.py test_001 ERROR 'name'
+2022-01-06 10:31:48,436 test_page.py test_001 ERROR 'name'
+2022-01-06 10:31:48,575 test_page.py test_001 ERROR 'name'
+2022-01-06 10:43:07,621 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 10:43:18,882 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 10:52:40,000 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 10:52:50,958 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 10:59:51,439 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 11:00:02,512 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:03:42,225 test_page.py test_001 ERROR Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+2022-01-06 11:03:42,342 test_page.py test_001 ERROR Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+2022-01-06 11:05:05,654 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 11:05:31,330 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div[2]/div[2]/div[1]/div/div"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:06:00,877 test_page.py test_001 ERROR assert 'Hi~高新体验店欢迎你！' == 'Hi~高新体验店欢迎你!'
+2022-01-06 11:06:23,793 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/div[2]/div[2]/div[1]/div/div"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:10:20,622 test_page.py test_001 ERROR assert '欢迎,高新体验店' == '欢迎，高新体验店'
+2022-01-06 11:10:43,952 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/ul/div[4]/div[3]/div[2]/div[1]"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:13:14,162 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 11:13:28,101 test_page.py test_001 ERROR assert '世纪开元新零售智慧门店' == '高新体验店'
+2022-01-06 11:14:20,600 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 11:14:31,593 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:17:58,288 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 11:18:09,439 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 11:18:09,442 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 11:18:09,444 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 11:29:27,431 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 11:29:27,990 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 11:29:31,558 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 11:29:32,297 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 11:35:09,075 test_page.py test_001 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:35:13,780 test_page.py test_001 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 11:35:13,790 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 11:35:13,792 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:08:24,191 test_page.py test_001 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 13:08:30,942 test_page.py test_001 ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 13:08:30,951 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:08:30,954 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:21:32,895 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 13:21:43,966 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 13:22:40,621 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 13:22:41,626 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 13:24:46,035 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 13:25:04,581 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 13:25:04,584 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:25:04,585 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:40:49,758 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 13:41:02,375 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 13:41:02,378 test_page.py test_003 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:41:02,381 test_page.py test_oo4 ERROR 'TestPage' object has no attribute 'lp'
+2022-01-06 13:51:49,927 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 13:52:03,323 test_page.py test_001 INFO 登陆成功，账号是diyadmin，密码是sjky2018
+2022-01-06 14:34:00,391 test_page.py test_001 INFO 登陆成功，账号是kaiyuan_shanda，密码是sjky2018
+2022-01-06 14:34:13,096 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 14:35:50,084 test_page.py test_001 INFO 登陆成功，账号是kaiyuan_shanda，密码是sjky2018
+2022-01-06 14:36:02,799 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 14:36:18,548 test_page.py test_003 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/ul/div[1]/i"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 14:36:30,036 test_page.py test_oo4 ERROR list index out of range
+2022-01-06 14:40:32,788 test_page.py test_001 INFO 登陆成功，账号是kaiyuan_shanda，密码是sjky2018
+2022-01-06 14:40:43,683 test_page.py test_001 ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/form/div/div[2]/div[2]/div/div[1]/div/input"}
+  (Session info: chrome=96.0.4664.110)
+  (Driver info: chromedriver=95.0.4638.69 (6a1600ed572fedecd573b6c2b90a22fe6392a410-refs/branch-heads/4638@{#984}),platform=Windows NT 10.0.19043 x86_64)
+
+2022-01-06 14:45:19,823 test_page.py test_001 INFO 登陆成功，账号是kaiyuan_shanda，密码是sjky2018
+2022-01-06 14:45:34,048 test_page.py test_001 INFO 登陆成功，账号是suchangzhou，密码是sjky2018
+2022-01-06 14:46:04,783 test_page.py test_003 INFO 新建商品成功,商品名称为工厂名片
+2022-01-06 14:46:09,882 test_page.py test_oo4 INFO 查询成功，订单号是2201067A89ED,商品是工厂名片

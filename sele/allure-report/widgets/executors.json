@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://10.168.20.111:8080/",
+  "buildOrder" : 11,
+  "buildName" : "ui自动化 #11",
+  "buildUrl" : "http://10.168.20.111:8080/job/ui%E8%87%AA%E5%8A%A8%E5%8C%96/11/",
+  "reportName" : "AllureReport",
+  "reportUrl" : "http://10.168.20.111:8080/job/ui%E8%87%AA%E5%8A%A8%E5%8C%96/11/allure"
+} ]

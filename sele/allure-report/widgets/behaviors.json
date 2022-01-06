@@ -1,0 +1,37 @@
+{
+  "total" : 5,
+  "items" : [ {
+    "uid" : "8ca294ffd9c7cbceb053dc545fb925eb",
+    "name" : "登录成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "87b41cb9bdfba44a48b8ce0275d363f5",
+    "name" : "添加商品成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "234146dd1c667efa09bb9a2ca6e6d894",
+    "name" : "查询",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

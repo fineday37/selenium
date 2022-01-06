@@ -1,0 +1,1 @@
+INFO     root:test_page.py:63 新建商品成功,商品名称为工厂名片

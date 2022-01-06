@@ -1,3 +1,25 @@
-- name:
-   xing : "suchangzhou"
-   ming : "sjky2018"
+-
+   url: "10.168.20.17:8081/logon/doLogin.do"
+   method : "post"
+   xing: "kaiyuan_shanda"
+   ming: "sjky2018"
+   stores: "山大人文创纪念品中心"
+   name:
+       userName: "kaiyuan_shanda"
+       passwd: "981abd4f4a49b37c79243e2da3cf95f0"
+#- url : "10.168.20.17:8081/logon/doLogin.do"
+#- method : "post"
+#- store : "高新体验店"
+
+-
+   url: "10.168.20.17:8081/logon/doLogin.do"
+   method: "post"
+   xing: "suchangzhou"
+   ming: "sjky2018"
+   stores : "高新体验店"
+   name:
+       userName: "suchangzhou"
+       passwd: "981abd4f4a49b37c79243e2da3cf95f0"
+#- url : "10.168.20.17:8081/logon/doLogin"
+#- method : "post"
+#- store : "高新体验店"

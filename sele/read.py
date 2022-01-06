@@ -11,9 +11,9 @@ class Readyaml:
             msxy_page = yaml.load(stream=f.read(), Loader=yaml.Loader)
         return msxy_page
 
-
 if __name__ == '__main__':
-    print(Readyaml('../sele/api.yaml').read_yaml()[0]["name"]["xing"])
+    print(Readyaml('../sele/api.yaml').read_yaml())
+
 # fs = open(os.getcwd() + "./api.yaml", encoding="UTF-8")
 # datas = yaml.load(fs)
 # print(datas)

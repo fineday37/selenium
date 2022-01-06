@@ -1,5 +1,4 @@
 import time
-
 from sele.automatic import Loginpage
 import pytest
 from sele.read import Readyaml
@@ -46,11 +45,13 @@ class TestPage:
     @pytest.mark.parametrize("arg", r)
     def test_001(self, arg, test1):
         try:
-            text = arg["name"]["xing"]
-            passwd = arg["name"]["ming"]
-            # lp = Logging(webserver.Chrome(r'C:\chromedriver.exe'))
-            txt = self.lp.login(text, passwd)
-            assert txt == "Hi~高新体验店欢迎你！"
+            text = arg["xing"]
+            passwd = arg["ming"]
+            stores = arg["stores"]
+
+            lp = Loginpage(webdriver.Chrome())
+            txt = lp.login(text, passwd)
+            assert txt == stores
             lg.info("登陆成功，账号是{}，密码是{}".format(text, passwd))
             print(test1)
         except Exception as e:
@@ -59,6 +60,9 @@ class TestPage:
     @allure.feature("添加商品成功")
     def test_003(self):
         try:
+            text = "suchangzhou"
+            passwd = "sjky2018"
+            self.lp.login(text, passwd)
             txt = self.lp.news()
             assert txt == "工厂名片"
             lg.info("新建商品成功,商品名称为{}".format(txt))
@@ -74,20 +78,20 @@ class TestPage:
             lg.error(e)
 
 
-class TestPage01:
-    def setup_class(self):
-        self.driver = webdriver.Chrome()
-        self.lp = Loginpage(self.driver)
-
-    def teardown_class(self):
-        self.driver.quit()
-
-    @pytest.mark.parametrize("grep", t)
-    def test_002(self, grep):
-        text = grep["name"]["xing"]
-        passwd = grep["name"]["ming"]
-        txt = self.lp.logins(text, passwd)
-        assert txt == "账号或密码不对"
+# class TestPage01:
+#     def setup_class(self):
+#         self.driver = webdriver.Chrome()
+#         self.lp = Loginpage(self.driver)
+#
+#     def teardown_class(self):
+#         self.driver.quit()
+#
+#     @pytest.mark.parametrize("grep", t)
+#     def test_002(self, grep):
+#         text = grep["name"]["xing"]
+#         passwd = grep["name"]["ming"]
+#         txt = self.lp.logins(text, passwd)
+#         assert txt == "账号或密码不对"
 
 
 class TestPage02:
@@ -103,4 +107,4 @@ class TestPage02:
 
 
 if __name__ == '__main__':
-    pytest.main("-vs ")
+    pytest.main("-vs")

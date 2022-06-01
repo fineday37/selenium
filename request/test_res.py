@@ -5,7 +5,7 @@ import allure
 import os
 from log.logs import loggings
 from request import mysql
-from sele.read import Readyaml
+from sele.read_yaml import Readyaml
 case = Readyaml("../sele/api.yaml").read_yaml()
 log1 = loggings()
 

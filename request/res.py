@@ -3,17 +3,20 @@ import json
 import requests
 from request import basis
 import pprint
-from sele.read import Readyaml
+from sele.read_yaml import Readyaml
+
 case = Readyaml("../sele/api.yaml").read_yaml()
+
+
 class Request:
     s = {}
 
     # 登录并获取cookie
-    def requets(self,urls,method,data):
+    def requets(self, urls, method, data):
         url = "http://" + urls
         res = basis.reCSV(method, url, data)
         print(res.status_code)
-        print(type(res.json()))
+        # print(type(res.json()))
         pprint.pprint(res.json())
         cookies = res.cookies
         cookie = requests.utils.dict_from_cookiejar(cookies)
@@ -52,6 +55,10 @@ class Request:
 
 
 if __name__ == '__main__':
-    Request().requets()
-    #Request().query()
+    date = {
+        "userName": "kaiyuan_shanda",
+        "passwd": "981abd4f4a49b37c79243e2da3cf95f0"
+    }
+    Request().requets("10.168.20.17:8081/logon/doLogin.do", "post", date)
+    # Request().query()
     # print(Request().s)

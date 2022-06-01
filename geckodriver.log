@@ -96,3 +96,14 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1644199548803	geckodriver	INFO	Listening on 127.0.0.1:53090
+1644199554883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileGGaBVt"
+1644199555313	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileGGaBVt\\search.json.mozlz4", (void 0)))
+1644199557166	Marionette	INFO	Listening on port 53103
+1644199557653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644199563992	Marionette	INFO	Stopped listening on port 53103
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

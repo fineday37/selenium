@@ -33,8 +33,11 @@ for i in yield_test(5):
     print(i, ",")
 var = lambda a, b, c: print(a, b, c)
 var(1, 2, 3)
-test = [[{"kdei": "jdk"}],[{"kdei":"djdk"}]]
-for w in test:
-    print(w)
-    ke = "dke"+ w[0]["kdei"]
-    print(ke)
+test = {"kdei": "jdk", "ked": "jdkda"}
+# for key in test:
+#     #print(key)
+#     test[key] = "'" + str(test[key]) + "'"
+#     print(test[key])
+key = ','.join(test.keys())
+value = ','.join(test.values())
+print(key, value)

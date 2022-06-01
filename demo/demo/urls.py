@@ -22,7 +22,10 @@ urlpatterns = [
     url(r'^hello/$', views.runoob),
     # url(r'^/$', search.search_form),
     path('testdb/', testdb.testdb),
+    path('Contact/', testdb.Contacts),
     path('admin/', admin.site.urls),
     url(r'^search/$', search.search),
+    url(r'search_from/$', search.search_form),
     url(r'^search-post/$', search2.search_post),
+    path('name/', search.name)
 ]

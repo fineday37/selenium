@@ -1,5 +1,6 @@
 import requests
 import pprint
+
 data = {
     'out_trade_no': '20150320010101001',
     'auth_code': '28763443825664394',
@@ -11,3 +12,10 @@ data = {
 res = requests.post("http://127.0.0.1:9091/trade/purchase", json=data)
 print(type(res.json()))
 pprint.pprint(res.json())
+
+datas = {
+    "name": None,
+    "password": "11111"
+}
+login = requests.post("http://127.0.0.1:9091/api/user/reg", json=datas)
+pprint.pprint(login.json())

@@ -26,7 +26,6 @@ def loggings():
 
 if __name__ == '__main__':
     loggings().info("debug日志信息")
-
 # logger.info("info日志信息")
 # logger.debug("debug日志信息")
 # logger.error("error日志信息")

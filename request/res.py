@@ -12,7 +12,8 @@ class Request:
     s = {}
 
     # 登录并获取cookie
-    def requets(self, urls, method, data):
+    @classmethod
+    def requets(cls, urls, method, data):
         url = "http://" + urls
         res = basis.reCSV(method, url, data)
         print(res.status_code)
@@ -20,7 +21,7 @@ class Request:
         pprint.pprint(res.json())
         cookies = res.cookies
         cookie = requests.utils.dict_from_cookiejar(cookies)
-        Request.s["Cookie"] = cookie
+        cls.s["Cookie"] = cookie
         print(type(data))
         pprint.pprint(Request.s)
         return res.json()
@@ -60,5 +61,5 @@ if __name__ == '__main__':
         "passwd": "981abd4f4a49b37c79243e2da3cf95f0"
     }
     Request().requets("10.168.20.17:8081/logon/doLogin.do", "post", date)
-    # Request().query()
+    Request().query()
     # print(Request().s)

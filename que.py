@@ -1,6 +1,6 @@
 import threading
 import time
-import queue
+import queues
 
 
 def producer():
@@ -18,7 +18,7 @@ def customer(name):
         time.sleep(1.5)
 
 
-q = queue.Queue(maxsize=5)
+q = queues.Queue(maxsize=5)
 p = threading.Thread(target=producer, )
 c = threading.Thread(target=customer, args=('jack',))
 p.start()

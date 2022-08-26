@@ -18,13 +18,13 @@ def test1():
 
 class Testpage:
     @allure.feature("登陆成功")
-    @pytest.mark.parametrize("arg",case)
-    def test_001(self, test1,arg):
+    @pytest.mark.parametrize("arg", case)
+    def test_001(self, test1, arg):
         url = arg["url"]
         method = arg["method"]
         data = arg["name"]
         stores = arg["stores"]
-        text = res.Request.requets(self, url,method,data)
+        text = res.Request.requets(url, method, data)
         txt = text["userData"]["userInfo"]["realName"]
         try:
             assert txt == stores
@@ -33,20 +33,19 @@ class Testpage:
         except Exception as e:
             log1.error(e)
 
-    @allure.feature("查询成功")
-    def test_002(self):
-        text = res.Request.query(self)
-        realprice = text["userData"]["orderList"][1]["realPrice"]
-        saleprice = text["userData"]["orderList"][1]["salePrice"]
-        discountPrice = text["userData"]["orderList"][1]["discountPrice"]
-        try:
-            c = int(saleprice) - int(realprice)
-            assert int(discountPrice) == c
-            log1.info("原价为{}，折价为{}，现价为{}".format(saleprice, realprice, discountPrice))
-        except Exception as e:
-            log1.error(e)
+    # @allure.feature("查询成功")
+    # def test_002(self):
+    #     text = res.Request.query(self)
+    #     realprice = text["userData"]["orderList"][1]["realPrice"]
+    #     saleprice = text["userData"]["orderList"][1]["salePrice"]
+    #     discountPrice = text["userData"]["orderList"][1]["discountPrice"]
+    #     try:
+    #         c = int(saleprice) - int(realprice)
+    #         assert int(discountPrice) == c
+    #         log1.info("原价为{}，折价为{}，现价为{}".format(saleprice, realprice, discountPrice))
+    #     except Exception as e:
+    #         log1.error(e)
 
 
 if __name__ == '__main__':
-    pytest.main(["-vs", "./request.test_res.py", '--alluredir', './allure-results'])
-    os.system('allure generate ./allure-results -o ./allure-reports')
+    pytest.main(["-vs"])

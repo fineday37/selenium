@@ -38,3 +38,10 @@ class Emp(models.Model):
     name = models.CharField(max_length=20)
     age = models.CharField(max_length=20)
     wage = models.FloatField(max_length=8, default=2)
+
+
+class Personnel(models.Model):
+    object = None
+    name = models.CharField(max_length=20)
+    age = models.CharField(max_length=20)
+    salary = models.IntegerField()

@@ -1,3 +1,6 @@
 2021-10-15 09:49:14,567 logs.py <module> INFO debug日志信息
 2021-11-12 14:14:45,926 logs.py <module> INFO debug日志信息
 2022-03-04 10:17:25,866 logs.py <module> INFO debug日志信息
+2022-06-30 15:50:14,934 logs.py <module> INFO debug日志信息
+2022-06-30 15:50:14,935 logs.py <module> INFO shuchu
+2022-06-30 15:50:14,935 logs.py <module> INFO shuchu

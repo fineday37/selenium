@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from . import views, search, search2, testdb
-
+from . import view, search, search2, testdb
+from model import views
 urlpatterns = [
-    url(r'^hello/$', views.runoob),
+    url(r'^hello/$', view.runoob),
     # url(r'^/$', search.search_form),
     path('testdb/', testdb.testdb),
     path('Contact/', testdb.Contacts),
@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^search/$', search.search),
     url(r'search_from/$', search.search_form),
     url(r'^search-post/$', search2.search_post),
-    path('name/', search.name)
+    path('name/', search.name),
+    path('add_emp', views.add_emp)
 ]

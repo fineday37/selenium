@@ -1,0 +1,100 @@
+{
+  "uid" : "a16ca8bb7d4a39a6",
+  "name" : "test_001[arg0]",
+  "fullName" : "test_res.Testpage#test_001",
+  "historyId" : "d6e063dc7e0b22b21b070798bd6466ce",
+  "time" : {
+    "start" : 1661755827623,
+    "stop" : 1661755827668,
+    "duration" : 45
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test1",
+    "time" : {
+      "start" : 1661755827453,
+      "stop" : 1661755827620,
+      "duration" : 167
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fc43f456000cc9bd",
+      "name" : "log",
+      "source" : "fc43f456000cc9bd.txt",
+      "type" : "text/plain",
+      "size" : 74
+    }, {
+      "uid" : "8aaafe09808ae03b",
+      "name" : "stdout",
+      "source" : "8aaafe09808ae03b.txt",
+      "type" : "text/plain",
+      "size" : 989
+    }, {
+      "uid" : "4bb88ba556381aba",
+      "name" : "stderr",
+      "source" : "4bb88ba556381aba.txt",
+      "type" : "text/plain",
+      "size" : 96
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "登陆成功"
+  }, {
+    "name" : "suite",
+    "value" : "test_res"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testpage"
+  }, {
+    "name" : "host",
+    "value" : "智慧零售-孔振国"
+  }, {
+    "name" : "thread",
+    "value" : "1340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_res"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg",
+    "value" : "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a16ca8bb7d4a39a6.json",
+  "parameterValues" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+}

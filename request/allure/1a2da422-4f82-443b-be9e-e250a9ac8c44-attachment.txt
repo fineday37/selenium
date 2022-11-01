@@ -1,0 +1,23 @@
+200
+{'message': None,
+ 'result': True,
+ 'succeed': True,
+ 'userData': {'isSjky': True,
+              'mshopType': '2',
+              'privateKey': '',
+              'roles': '',
+              'storeType': '2',
+              'tenantType': '02',
+              'userInfo': {'isweb': '前台权限',
+                           'realName': '山大人文创纪念品中心',
+                           'storeLogon': 'store',
+                           'token': 'cookie',
+                           'userId': 'ACF8F1EED32B475884068CC721F5C2D2',
+                           'userName': 'kaiyuan_shanda',
+                           'weight': 1}}}
+<class 'dict'>
+{'Cookie': {'JSESSIONID': 'DD4EE49D72F21ECBA1714F2CE1042D58',
+            'logoUrl': '""',
+            'realName': '%E5%B1%B1%E5%A4%A7%E4%BA%BA%E6%96%87%E5%88%9B%E7%BA%AA%E5%BF%B5%E5%93%81%E4%B8%AD%E5%BF%83',
+            'storeName': '%E5%B1%B1%E5%A4%A7%E4%BA%BA%E6%96%87%E5%88%9B%E7%BA%AA%E5%BF%B5%E5%93%81%E4%B8%AD%E5%BF%83'}}
+2021-06

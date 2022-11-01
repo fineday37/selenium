@@ -4,44 +4,32 @@
   "children" : [ {
     "name" : "登陆成功",
     "children" : [ {
-      "name" : "test_001",
-      "uid" : "597f84ce1afac391",
+      "name" : "test_001[arg0]",
+      "uid" : "8adab4d7d989bc3c",
       "parentUid" : "02c1e025567b70de32d0b005eabc6d02",
       "status" : "passed",
       "time" : {
-        "start" : 1639641144591,
-        "stop" : 1639641144662,
-        "duration" : 71
+        "start" : 1661755846000,
+        "stop" : 1661755846058,
+        "duration" : 58
       },
       "flaky" : false,
       "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 13,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "02c1e025567b70de32d0b005eabc6d02"
-  }, {
-    "name" : "查询成功",
-    "children" : [ {
-      "name" : "test_002",
-      "uid" : "891ba14370e611f4",
-      "parentUid" : "e0e7ef2d5fb6b493ffb5c05a4a92a4bb",
+      "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+    }, {
+      "name" : "test_001[arg1]",
+      "uid" : "6446eb17caf6a567",
+      "parentUid" : "02c1e025567b70de32d0b005eabc6d02",
       "status" : "passed",
       "time" : {
-        "start" : 1639641144665,
-        "stop" : 1639641145449,
-        "duration" : 784
+        "start" : 1661755846241,
+        "stop" : 1661755846282,
+        "duration" : 41
       },
       "flaky" : false,
       "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 13,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
+      "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
     } ],
-    "uid" : "e0e7ef2d5fb6b493ffb5c05a4a92a4bb"
+    "uid" : "02c1e025567b70de32d0b005eabc6d02"
   } ]
 }

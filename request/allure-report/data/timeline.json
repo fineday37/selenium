@@ -2,540 +2,518 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "LAPTOP-GU9TQVP5",
+    "name" : "智慧零售-孔振国",
     "children" : [ {
-      "name" : "39208-MainThread",
+      "name" : "122740-MainThread",
       "children" : [ {
-        "name" : "test_002",
-        "uid" : "15910d3bc4ba0966",
-        "parentUid" : "6092f04ad42d73fe5738243c43ba2a20",
+        "name" : "test_001[arg1]",
+        "uid" : "659d404555fd702f",
+        "parentUid" : "d1f2fb331c376b8c8cdce0b1638f3c4a",
         "status" : "passed",
         "time" : {
-          "start" : 1638422666309,
-          "stop" : 1638422666880,
-          "duration" : 571
+          "start" : 1661505790105,
+          "stop" : 1661505790146,
+          "duration" : 41
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_001",
-        "uid" : "f0a8f4dfe84c81f0",
-        "parentUid" : "6092f04ad42d73fe5738243c43ba2a20",
+        "name" : "test_001[arg0]",
+        "uid" : "7fbaa21a70ee8279",
+        "parentUid" : "d1f2fb331c376b8c8cdce0b1638f3c4a",
         "status" : "passed",
         "time" : {
-          "start" : 1638422666248,
-          "stop" : 1638422666306,
-          "duration" : 58
+          "start" : 1661505789757,
+          "stop" : 1661505789856,
+          "duration" : 99
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "6092f04ad42d73fe5738243c43ba2a20"
+      "uid" : "d1f2fb331c376b8c8cdce0b1638f3c4a"
     }, {
-      "name" : "42792-MainThread",
+      "name" : "63872-MainThread",
       "children" : [ {
-        "name" : "test_002",
-        "uid" : "891ba14370e611f4",
-        "parentUid" : "1da078b09bd8d15c6e40071260486003",
+        "name" : "test_001[arg1]",
+        "uid" : "3724ac9366eed92e",
+        "parentUid" : "4cea8f250a02f9bff7182eff9da73ffb",
         "status" : "passed",
         "time" : {
-          "start" : 1639641144665,
-          "stop" : 1639641145449,
-          "duration" : 784
+          "start" : 1661503933440,
+          "stop" : 1661503933478,
+          "duration" : 38
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 13,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_001",
-        "uid" : "597f84ce1afac391",
-        "parentUid" : "1da078b09bd8d15c6e40071260486003",
+        "name" : "test_001[arg0]",
+        "uid" : "a8a2414cb0faa103",
+        "parentUid" : "4cea8f250a02f9bff7182eff9da73ffb",
         "status" : "passed",
         "time" : {
-          "start" : 1639641144591,
-          "stop" : 1639641144662,
-          "duration" : 71
+          "start" : 1661503933044,
+          "stop" : 1661503933141,
+          "duration" : 97
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 13,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "1da078b09bd8d15c6e40071260486003"
+      "uid" : "4cea8f250a02f9bff7182eff9da73ffb"
     }, {
-      "name" : "17980-MainThread",
+      "name" : "22672-MainThread",
       "children" : [ {
-        "name" : "test_002",
-        "uid" : "5ac90c6fb3589e46",
-        "parentUid" : "4da19abe1d4c9c5692237b512b996481",
+        "name" : "test_001[arg1]",
+        "uid" : "edea7a6ea6baf921",
+        "parentUid" : "1cb879145a5dd65b24355cbca472ea4e",
         "status" : "passed",
         "time" : {
-          "start" : 1638515430152,
-          "stop" : 1638515430771,
-          "duration" : 619
+          "start" : 1661734983058,
+          "stop" : 1661734983108,
+          "duration" : 50
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_001",
-        "uid" : "cb4aac2b193f448b",
-        "parentUid" : "4da19abe1d4c9c5692237b512b996481",
+        "name" : "test_001[arg0]",
+        "uid" : "4f9c0d686c2651eb",
+        "parentUid" : "1cb879145a5dd65b24355cbca472ea4e",
         "status" : "passed",
         "time" : {
-          "start" : 1638515430099,
-          "stop" : 1638515430148,
-          "duration" : 49
+          "start" : 1661734982575,
+          "stop" : 1661734982796,
+          "duration" : 221
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "4da19abe1d4c9c5692237b512b996481"
+      "uid" : "1cb879145a5dd65b24355cbca472ea4e"
     }, {
-      "name" : "43844-MainThread",
+      "name" : "120940-MainThread",
       "children" : [ {
-        "name" : "test_001",
-        "uid" : "d39b1f456c1f14a4",
-        "parentUid" : "ab9ae3901f20624f799ac317dfdad599",
+        "name" : "test_001[arg1]",
+        "uid" : "3b8a6696e542bc35",
+        "parentUid" : "466bd97b9579b9af8f7c41e46daa3305",
         "status" : "passed",
         "time" : {
-          "start" : 1638421912170,
-          "stop" : 1638421912217,
-          "duration" : 47
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_002",
-        "uid" : "166cbd26a2e47fd4",
-        "parentUid" : "ab9ae3901f20624f799ac317dfdad599",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638421912220,
-          "stop" : 1638421912801,
-          "duration" : 581
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ab9ae3901f20624f799ac317dfdad599"
-    }, {
-      "name" : "36824-MainThread",
-      "children" : [ {
-        "name" : "test_002",
-        "uid" : "e387d66fcd37235e",
-        "parentUid" : "7438d31c2beec85b1ba7589c32a66f0f",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638432928818,
-          "stop" : 1638432929344,
-          "duration" : 526
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_001",
-        "uid" : "14272921b4682541",
-        "parentUid" : "7438d31c2beec85b1ba7589c32a66f0f",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638432928774,
-          "stop" : 1638432928814,
-          "duration" : 40
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7438d31c2beec85b1ba7589c32a66f0f"
-    }, {
-      "name" : "35648-MainThread",
-      "children" : [ {
-        "name" : "test_001",
-        "uid" : "37adefbc86dd19a8",
-        "parentUid" : "3f4b06b1a63cc0de5ea2cf10fe90f528",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638432670988,
-          "stop" : 1638432671024,
-          "duration" : 36
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_002",
-        "uid" : "bf22b7dece6e8676",
-        "parentUid" : "3f4b06b1a63cc0de5ea2cf10fe90f528",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638432671028,
-          "stop" : 1638432671584,
-          "duration" : 556
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3f4b06b1a63cc0de5ea2cf10fe90f528"
-    }, {
-      "name" : "11660-MainThread",
-      "children" : [ {
-        "name" : "test_002",
-        "uid" : "c7c1fed720d42b91",
-        "parentUid" : "89c044b10e784f23e60ad9d70471853c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639449289566,
-          "stop" : 1639449290269,
-          "duration" : 703
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_001",
-        "uid" : "10a7cd29648ab99f",
-        "parentUid" : "89c044b10e784f23e60ad9d70471853c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639449289491,
-          "stop" : 1639449289563,
-          "duration" : 72
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "89c044b10e784f23e60ad9d70471853c"
-    }, {
-      "name" : "40260-MainThread",
-      "children" : [ {
-        "name" : "test_002",
-        "uid" : "412672acaeaa3125",
-        "parentUid" : "a4b9e36ec0118389459c45584b2b0440",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639641037431,
-          "stop" : 1639641038209,
-          "duration" : 778
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_001",
-        "uid" : "25e09615b10616e7",
-        "parentUid" : "a4b9e36ec0118389459c45584b2b0440",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639641037368,
-          "stop" : 1639641037427,
+          "start" : 1661502144994,
+          "stop" : 1661502145053,
           "duration" : 59
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a4b9e36ec0118389459c45584b2b0440"
-    }, {
-      "name" : "43700-MainThread",
-      "children" : [ {
-        "name" : "test_001",
-        "uid" : "7483a0791c7d6278",
-        "parentUid" : "084d2f26763c81f8435d48a80add901a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638432327641,
-          "stop" : 1638432327688,
-          "duration" : 47
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_002",
-        "uid" : "4a7570d6b162bd66",
-        "parentUid" : "084d2f26763c81f8435d48a80add901a",
+        "name" : "test_001[arg0]",
+        "uid" : "fa0a964a2357db59",
+        "parentUid" : "466bd97b9579b9af8f7c41e46daa3305",
         "status" : "passed",
         "time" : {
-          "start" : 1638432327692,
-          "stop" : 1638432328269,
-          "duration" : 577
+          "start" : 1661502144554,
+          "stop" : 1661502144672,
+          "duration" : 118
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "084d2f26763c81f8435d48a80add901a"
+      "uid" : "466bd97b9579b9af8f7c41e46daa3305"
     }, {
-      "name" : "9596-MainThread",
+      "name" : "122356-MainThread",
       "children" : [ {
-        "name" : "test_002",
-        "uid" : "32e665784d12b7c0",
-        "parentUid" : "08011260284622367cfe4d619808c69e",
+        "name" : "test_001[arg0]",
+        "uid" : "863ce08c2382c870",
+        "parentUid" : "82f9eb2d20b950b128dc420cc1269c1e",
         "status" : "passed",
         "time" : {
-          "start" : 1638415576187,
-          "stop" : 1638415576772,
-          "duration" : 585
+          "start" : 1661505587600,
+          "stop" : 1661505587706,
+          "duration" : 106
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_001",
-        "uid" : "a1e5c363491a3df9",
-        "parentUid" : "08011260284622367cfe4d619808c69e",
+        "name" : "test_001[arg1]",
+        "uid" : "b7afcce5b0f65628",
+        "parentUid" : "82f9eb2d20b950b128dc420cc1269c1e",
         "status" : "passed",
         "time" : {
-          "start" : 1638415576130,
-          "stop" : 1638415576184,
-          "duration" : 54
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "08011260284622367cfe4d619808c69e"
-    }, {
-      "name" : "9084-MainThread",
-      "children" : [ {
-        "name" : "test_002",
-        "uid" : "a4b69ff0922c1e4a",
-        "parentUid" : "11fc1f5d8b1b6424a9882042799df4cb",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638416006956,
-          "stop" : 1638416007507,
-          "duration" : 551
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_001",
-        "uid" : "8106e708ca2ecf38",
-        "parentUid" : "11fc1f5d8b1b6424a9882042799df4cb",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638416006917,
-          "stop" : 1638416006953,
-          "duration" : 36
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "11fc1f5d8b1b6424a9882042799df4cb"
-    }, {
-      "name" : "39992-MainThread",
-      "children" : [ {
-        "name" : "test_002",
-        "uid" : "9d0c2ecd31f4bc26",
-        "parentUid" : "a0de45f9c52fdb28f3f55530ed0621a1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639641097145,
-          "stop" : 1639641098096,
-          "duration" : 951
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_001",
-        "uid" : "7943418890927ca8",
-        "parentUid" : "a0de45f9c52fdb28f3f55530ed0621a1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1639641097075,
-          "stop" : 1639641097141,
-          "duration" : 66
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a0de45f9c52fdb28f3f55530ed0621a1"
-    }, {
-      "name" : "34320-MainThread",
-      "children" : [ {
-        "name" : "test_001",
-        "uid" : "67e58fced20cfc17",
-        "parentUid" : "61e2b4faeda8359fceafa0d19bea5893",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638415768023,
-          "stop" : 1638415768068,
+          "start" : 1661505587939,
+          "stop" : 1661505587984,
           "duration" : 45
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_002",
-        "uid" : "bdcc1ea8ec655e34",
-        "parentUid" : "61e2b4faeda8359fceafa0d19bea5893",
-        "status" : "passed",
-        "time" : {
-          "start" : 1638415768071,
-          "stop" : 1638415768620,
-          "duration" : 549
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "61e2b4faeda8359fceafa0d19bea5893"
+      "uid" : "82f9eb2d20b950b128dc420cc1269c1e"
     }, {
-      "name" : "43528-MainThread",
+      "name" : "130432-MainThread",
       "children" : [ {
-        "name" : "test_001",
-        "uid" : "8480b6c056ac79c9",
-        "parentUid" : "86161c8f8e617d8c3935861edc6d1e17",
+        "name" : "test_001[arg1]",
+        "uid" : "e815ea6c10bc882f",
+        "parentUid" : "eb458f130c304f8cc5e9955d6fe9cd12",
         "status" : "passed",
         "time" : {
-          "start" : 1638431988235,
-          "stop" : 1638431988286,
-          "duration" : 51
+          "start" : 1661504993019,
+          "stop" : 1661504993062,
+          "duration" : 43
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       }, {
-        "name" : "test_002",
-        "uid" : "29be02ac51c36e4b",
-        "parentUid" : "86161c8f8e617d8c3935861edc6d1e17",
+        "name" : "test_001[arg0]",
+        "uid" : "4d0cb7959c8fb035",
+        "parentUid" : "eb458f130c304f8cc5e9955d6fe9cd12",
         "status" : "passed",
         "time" : {
-          "start" : 1638431988291,
-          "stop" : 1638431988884,
-          "duration" : 593
+          "start" : 1661504992628,
+          "stop" : 1661504992751,
+          "duration" : 123
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
       } ],
-      "uid" : "86161c8f8e617d8c3935861edc6d1e17"
+      "uid" : "eb458f130c304f8cc5e9955d6fe9cd12"
+    }, {
+      "name" : "135700-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "f41e051ebfd2d234",
+        "parentUid" : "c86933c664f63687ea36c9e53af57def",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661503733394,
+          "stop" : 1661503733499,
+          "duration" : 105
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "2f6abcba677c9e51",
+        "parentUid" : "c86933c664f63687ea36c9e53af57def",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661503733747,
+          "stop" : 1661503733787,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "c86933c664f63687ea36c9e53af57def"
+    }, {
+      "name" : "132720-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "6be128eb798db1e2",
+        "parentUid" : "0048acaf6a5c0d4e98e18c97b8eed8bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661504819135,
+          "stop" : 1661504819249,
+          "duration" : 114
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "2c18b0aecba81150",
+        "parentUid" : "0048acaf6a5c0d4e98e18c97b8eed8bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661504819546,
+          "stop" : 1661504819586,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "0048acaf6a5c0d4e98e18c97b8eed8bb"
+    }, {
+      "name" : "137200-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "9d78fcc1b2233244",
+        "parentUid" : "bafd0958a94f94a02a6769deca10220e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506473600,
+          "stop" : 1661506473710,
+          "duration" : 110
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "7cd630c853033815",
+        "parentUid" : "bafd0958a94f94a02a6769deca10220e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506473965,
+          "stop" : 1661506474011,
+          "duration" : 46
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "bafd0958a94f94a02a6769deca10220e"
+    }, {
+      "name" : "120408-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "7f6b3b0f46be4f1c",
+        "parentUid" : "2eee23ac35be7b5c546af05bd4a754b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506180046,
+          "stop" : 1661506180172,
+          "duration" : 126
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "a60a6e8659a9e2f4",
+        "parentUid" : "2eee23ac35be7b5c546af05bd4a754b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506180513,
+          "stop" : 1661506180547,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "2eee23ac35be7b5c546af05bd4a754b5"
+    }, {
+      "name" : "134728-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "ccdf2caae5d6f4",
+        "parentUid" : "ff66dd467d8e1634e08baedea1d79063",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505115411,
+          "stop" : 1661505115506,
+          "duration" : 95
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "b08f382960c063fa",
+        "parentUid" : "ff66dd467d8e1634e08baedea1d79063",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505115734,
+          "stop" : 1661505115774,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "ff66dd467d8e1634e08baedea1d79063"
+    }, {
+      "name" : "1340-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg1]",
+        "uid" : "9a0fd731ae4b2a26",
+        "parentUid" : "39742d22b45bbc1771da64cfceed83bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755827821,
+          "stop" : 1661755827854,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg0]",
+        "uid" : "a16ca8bb7d4a39a6",
+        "parentUid" : "39742d22b45bbc1771da64cfceed83bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755827623,
+          "stop" : 1661755827668,
+          "duration" : 45
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "39742d22b45bbc1771da64cfceed83bc"
+    }, {
+      "name" : "15972-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "6c3b769c12a49ecf",
+        "parentUid" : "b1f7c65d921fb265b2459309321d5395",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755420983,
+          "stop" : 1661755421029,
+          "duration" : 46
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "84f630163b10645",
+        "parentUid" : "b1f7c65d921fb265b2459309321d5395",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755421428,
+          "stop" : 1661755421459,
+          "duration" : 31
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "b1f7c65d921fb265b2459309321d5395"
+    }, {
+      "name" : "130584-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg1]",
+        "uid" : "2c58efefc2f692ab",
+        "parentUid" : "37b46c370acba857449731eb23870dca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661501783646,
+          "stop" : 1661501783682,
+          "duration" : 36
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg0]",
+        "uid" : "99cefdce09f86524",
+        "parentUid" : "37b46c370acba857449731eb23870dca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661501783302,
+          "stop" : 1661501783397,
+          "duration" : 95
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "37b46c370acba857449731eb23870dca"
+    }, {
+      "name" : "16032-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg1]",
+        "uid" : "6446eb17caf6a567",
+        "parentUid" : "f204a6b308c04ff974cb73a25e423a78",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755846241,
+          "stop" : 1661755846282,
+          "duration" : 41
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg0]",
+        "uid" : "8adab4d7d989bc3c",
+        "parentUid" : "f204a6b308c04ff974cb73a25e423a78",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755846000,
+          "stop" : 1661755846058,
+          "duration" : 58
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "f204a6b308c04ff974cb73a25e423a78"
+    }, {
+      "name" : "3496-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg1]",
+        "uid" : "4db879a94cb08d0",
+        "parentUid" : "23825268e64de7da64fb71d2b499e3e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661735425603,
+          "stop" : 1661735425640,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg0]",
+        "uid" : "3fc9f1df315e2466",
+        "parentUid" : "23825268e64de7da64fb71d2b499e3e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661735425268,
+          "stop" : 1661735425321,
+          "duration" : 53
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "23825268e64de7da64fb71d2b499e3e4"
+    }, {
+      "name" : "73276-MainThread",
+      "children" : [ {
+        "name" : "test_001[arg0]",
+        "uid" : "4ddb053a46215bbf",
+        "parentUid" : "8a77fbc86c355ab6046927347f6520ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505176260,
+          "stop" : 1661505176375,
+          "duration" : 115
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      }, {
+        "name" : "test_001[arg1]",
+        "uid" : "fac694c9b4f400dc",
+        "parentUid" : "8a77fbc86c355ab6046927347f6520ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505176682,
+          "stop" : 1661505176721,
+          "duration" : 39
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+      } ],
+      "uid" : "8a77fbc86c355ab6046927347f6520ff"
     } ],
-    "uid" : "ae2995482b8eb18cb32156f2bd228af8"
+    "uid" : "236a3802e3c10fd2acbef7bc5d3c13ff"
   } ]
 }

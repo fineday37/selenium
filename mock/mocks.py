@@ -2,7 +2,7 @@ import json
 import random
 
 from flask import Flask, request, abort, jsonify
-import datetime
+import date
 
 app = Flask(__name__)
 
@@ -19,7 +19,7 @@ def _mock():
     out_trade_no = res['out_trade_no']
     auth_code = res['auth_code']
     data = {'code': '400004', 'msg': 'Business Failed', 'sub_code': 'ACQ.TRADE_HAS_SUCCESS', 'sub_msg': '交易已被支付',
-            'trade_no': datetime.datetime.now().strftime("%Y--%m--%d %H:%M:%S"),
+            'trade_no': date.datetime.now().strftime("%Y--%m--%d %H:%M:%S"),
             'out_trade_no': out_trade_no}
     if auth_code != '28763443825664394':
         return {'code': '50000', 'msg': '请求校验码失败'}

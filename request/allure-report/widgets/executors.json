@@ -1,10 +1,10 @@
 [ {
   "name" : "Jenkins",
   "type" : "jenkins",
-  "url" : "http://10.168.20.111:8000/",
-  "buildOrder" : 63,
-  "buildName" : "接口测试 #63",
-  "buildUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/63/",
+  "url" : "http://60.205.204.47:8080/",
+  "buildOrder" : 23,
+  "buildName" : "login #23",
+  "buildUrl" : "http://60.205.204.47:8080/job/login/23/",
   "reportName" : "AllureReport",
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/63/allure"
+  "reportUrl" : "http://60.205.204.47:8080/job/login/23/allure"
 } ]

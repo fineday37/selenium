@@ -1,0 +1,376 @@
+{
+  "uid" : "8adab4d7d989bc3c",
+  "name" : "test_001[arg0]",
+  "fullName" : "test_res.Testpage#test_001",
+  "historyId" : "d6e063dc7e0b22b21b070798bd6466ce",
+  "time" : {
+    "start" : 1661755846000,
+    "stop" : 1661755846058,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test1",
+    "time" : {
+      "start" : 1661755845776,
+      "stop" : 1661755845998,
+      "duration" : 222
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "da872331fb20c87e",
+      "name" : "log",
+      "source" : "da872331fb20c87e.txt",
+      "type" : "text/plain",
+      "size" : 74
+    }, {
+      "uid" : "aae8b13dcda179ed",
+      "name" : "stdout",
+      "source" : "aae8b13dcda179ed.txt",
+      "type" : "text/plain",
+      "size" : 989
+    }, {
+      "uid" : "1263a1f919fa7bb7",
+      "name" : "stderr",
+      "source" : "1263a1f919fa7bb7.txt",
+      "type" : "text/plain",
+      "size" : 96
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "登陆成功"
+  }, {
+    "name" : "suite",
+    "value" : "test_res"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testpage"
+  }, {
+    "name" : "host",
+    "value" : "智慧零售-孔振国"
+  }, {
+    "name" : "thread",
+    "value" : "16032-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_res"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg",
+    "value" : "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a16ca8bb7d4a39a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661755827623,
+        "stop" : 1661755827668,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "6c3b769c12a49ecf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661755420983,
+        "stop" : 1661755421029,
+        "duration" : 46
+      }
+    }, {
+      "uid" : "3fc9f1df315e2466",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661735425268,
+        "stop" : 1661735425321,
+        "duration" : 53
+      }
+    }, {
+      "uid" : "4f9c0d686c2651eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661734982575,
+        "stop" : 1661734982796,
+        "duration" : 221
+      }
+    }, {
+      "uid" : "9d78fcc1b2233244",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661506473600,
+        "stop" : 1661506473710,
+        "duration" : 110
+      }
+    }, {
+      "uid" : "7f6b3b0f46be4f1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661506180046,
+        "stop" : 1661506180172,
+        "duration" : 126
+      }
+    }, {
+      "uid" : "7fbaa21a70ee8279",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661505789757,
+        "stop" : 1661505789856,
+        "duration" : 99
+      }
+    }, {
+      "uid" : "863ce08c2382c870",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661505587600,
+        "stop" : 1661505587706,
+        "duration" : 106
+      }
+    }, {
+      "uid" : "4ddb053a46215bbf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661505176260,
+        "stop" : 1661505176375,
+        "duration" : 115
+      }
+    }, {
+      "uid" : "ccdf2caae5d6f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661505115411,
+        "stop" : 1661505115506,
+        "duration" : 95
+      }
+    }, {
+      "uid" : "4d0cb7959c8fb035",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661504992628,
+        "stop" : 1661504992751,
+        "duration" : 123
+      }
+    }, {
+      "uid" : "6be128eb798db1e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661504819135,
+        "stop" : 1661504819249,
+        "duration" : 114
+      }
+    }, {
+      "uid" : "a8a2414cb0faa103",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661503933044,
+        "stop" : 1661503933141,
+        "duration" : 97
+      }
+    }, {
+      "uid" : "f41e051ebfd2d234",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661503733394,
+        "stop" : 1661503733499,
+        "duration" : 105
+      }
+    }, {
+      "uid" : "fa0a964a2357db59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661502144554,
+        "stop" : 1661502144672,
+        "duration" : 118
+      }
+    }, {
+      "uid" : "99cefdce09f86524",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661501783302,
+        "stop" : 1661501783397,
+        "duration" : 95
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 16,
+        "unknown" : 0,
+        "total" : 16
+      },
+      "items" : [ {
+        "uid" : "a39a2d1e642cc49c",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/22/allure/#testresult/a39a2d1e642cc49c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755827623,
+          "stop" : 1661755827668,
+          "duration" : 45
+        }
+      }, {
+        "uid" : "8c3409d12fab053e",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/21/allure/#testresult/8c3409d12fab053e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661755420983,
+          "stop" : 1661755421029,
+          "duration" : 46
+        }
+      }, {
+        "uid" : "b2587e04504e437c",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/20/allure/#testresult/b2587e04504e437c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661735425268,
+          "stop" : 1661735425321,
+          "duration" : 53
+        }
+      }, {
+        "uid" : "476f6a35ee9e0ce5",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/19/allure/#testresult/476f6a35ee9e0ce5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661734982575,
+          "stop" : 1661734982796,
+          "duration" : 221
+        }
+      }, {
+        "uid" : "57296c3e7b9a358c",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/18/allure/#testresult/57296c3e7b9a358c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506473600,
+          "stop" : 1661506473710,
+          "duration" : 110
+        }
+      }, {
+        "uid" : "8541132ae84453a4",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/17/allure/#testresult/8541132ae84453a4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661506180046,
+          "stop" : 1661506180172,
+          "duration" : 126
+        }
+      }, {
+        "uid" : "d3a3f3d9c4c53463",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/16/allure/#testresult/d3a3f3d9c4c53463",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505789757,
+          "stop" : 1661505789856,
+          "duration" : 99
+        }
+      }, {
+        "uid" : "74cfb894936a98be",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/15/allure/#testresult/74cfb894936a98be",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505587600,
+          "stop" : 1661505587706,
+          "duration" : 106
+        }
+      }, {
+        "uid" : "bb66eb8909ae94e6",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/14/allure/#testresult/bb66eb8909ae94e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505176260,
+          "stop" : 1661505176375,
+          "duration" : 115
+        }
+      }, {
+        "uid" : "5b40bfb067cb695e",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/13/allure/#testresult/5b40bfb067cb695e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661505115411,
+          "stop" : 1661505115506,
+          "duration" : 95
+        }
+      }, {
+        "uid" : "7ceb5e5827f63d47",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/12/allure/#testresult/7ceb5e5827f63d47",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661504992628,
+          "stop" : 1661504992751,
+          "duration" : 123
+        }
+      }, {
+        "uid" : "e7c8d655867f89af",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/11/allure/#testresult/e7c8d655867f89af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661504819135,
+          "stop" : 1661504819249,
+          "duration" : 114
+        }
+      }, {
+        "uid" : "b98ea3619a78ae49",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/10/allure/#testresult/b98ea3619a78ae49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661503933044,
+          "stop" : 1661503933141,
+          "duration" : 97
+        }
+      }, {
+        "uid" : "22086b484b5e172c",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/9/allure/#testresult/22086b484b5e172c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661503733394,
+          "stop" : 1661503733499,
+          "duration" : 105
+        }
+      }, {
+        "uid" : "92f4b7b0d74e6800",
+        "reportUrl" : "http://60.205.204.47:8080/job/login/8/allure/#testresult/92f4b7b0d74e6800",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661502144554,
+          "stop" : 1661502144672,
+          "duration" : 118
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8adab4d7d989bc3c.json",
+  "parameterValues" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'kaiyuan_shanda', 'ming': 'sjky2018', 'stores': '山大人文创纪念品中心', 'name': {'userName': 'kaiyuan_shanda', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+}

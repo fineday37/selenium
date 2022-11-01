@@ -1,4 +1,79 @@
 [ {
+  "buildOrder" : 22,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/22/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 21,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/21/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 20,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/20/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 19,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/19/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 18,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/18/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 17,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/17/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 16,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/16/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 15,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/15/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 14,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/14/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 13,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/13/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 12,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/12/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 11,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/11/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 10,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/10/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 9,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/9/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 8,
+  "reportUrl" : "http://60.205.204.47:8080/job/login/8/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
   "buildOrder" : 60,
   "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/60/allure",
   "reportName" : "AllureReport",
@@ -21,36 +96,6 @@
 }, {
   "buildOrder" : 56,
   "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/56/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 55,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/55/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 54,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/54/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 53,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/53/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 52,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/52/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 51,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/51/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 50,
-  "reportUrl" : "http://10.168.20.111:8000/job/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/50/allure",
   "reportName" : "AllureReport",
   "data" : { }
 } ]

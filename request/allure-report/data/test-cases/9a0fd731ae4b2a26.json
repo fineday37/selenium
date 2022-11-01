@@ -1,0 +1,100 @@
+{
+  "uid" : "9a0fd731ae4b2a26",
+  "name" : "test_001[arg1]",
+  "fullName" : "test_res.Testpage#test_001",
+  "historyId" : "32729c141718f600e7fecbbbef623208",
+  "time" : {
+    "start" : 1661755827821,
+    "stop" : 1661755827854,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test1",
+    "time" : {
+      "start" : 1661755827674,
+      "stop" : 1661755827821,
+      "duration" : 147
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b5d9812b7c2ee314",
+      "name" : "log",
+      "source" : "b5d9812b7c2ee314.txt",
+      "type" : "text/plain",
+      "size" : 59
+    }, {
+      "uid" : "9349d6f416909fa",
+      "name" : "stdout",
+      "source" : "9349d6f416909fa.txt",
+      "type" : "text/plain",
+      "size" : 915
+    }, {
+      "uid" : "d8d0ff21b0bfa684",
+      "name" : "stderr",
+      "source" : "d8d0ff21b0bfa684.txt",
+      "type" : "text/plain",
+      "size" : 81
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "登陆成功"
+  }, {
+    "name" : "suite",
+    "value" : "test_res"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testpage"
+  }, {
+    "name" : "host",
+    "value" : "智慧零售-孔振国"
+  }, {
+    "name" : "thread",
+    "value" : "1340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_res"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg",
+    "value" : "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9a0fd731ae4b2a26.json",
+  "parameterValues" : [ "{'url': '10.168.20.17:8081/logon/doLogin.do', 'method': 'post', 'xing': 'suchangzhou', 'ming': 'sjky2018', 'stores': '高新体验店', 'name': {'userName': 'suchangzhou', 'passwd': '981abd4f4a49b37c79243e2da3cf95f0'}}" ]
+}

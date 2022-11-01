@@ -3,7 +3,7 @@ import json
 import requests
 import pprint
 import os
-import datetime
+import date
 import xlwings
 
 
@@ -32,4 +32,4 @@ print(str(res.json()))
 with open('yello.txt', "a+") as f:
     f.write(str(res.json()))
 f.close()
-print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+print(date.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))

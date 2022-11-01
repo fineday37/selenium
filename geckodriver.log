@@ -107,3 +107,46 @@ console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkErr
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1666919834619	geckodriver	INFO	Listening on 127.0.0.1:13366
+1666921843551	geckodriver	INFO	Listening on 127.0.0.1:15000
+1666921845205	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileOhd2qc"
+1666921845730	Marionette	INFO	Marionette enabled
+1666921845737	Marionette	INFO	Listening on port 15012
+Read port: 15012
+1666921845850	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileOhd2qc\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://hectorstatic.baidu.com/96c9c06653ba892e.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1666921851944	Marionette	INFO	Stopped listening on port 15012
+1666922171974	geckodriver	INFO	Listening on 127.0.0.1:16700
+1666922174038	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileahNWmW"
+1666922174514	Marionette	INFO	Marionette enabled
+1666922174519	Marionette	INFO	Listening on port 16711
+Read port: 16711
+1666922174611	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileahNWmW\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://hectorstatic.baidu.com/96c9c06653ba892e.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1666922184246	Marionette	INFO	Stopped listening on port 16711
+1666922396529	geckodriver	INFO	Listening on 127.0.0.1:18681
+1666922398576	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileZqy0Lb"
+1666922399024	Marionette	INFO	Marionette enabled
+1666922399029	Marionette	INFO	Listening on port 18692
+Read port: 18692
+1666922399119	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofileZqy0Lb\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://g.alicdn.com/secdev/sufei_data/3.9.10/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js?v=1, line 5: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.7/et_n.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.7/et_n.js, line 2: WebGL context was lost.
+1666922412779	Marionette	INFO	Stopped listening on port 18692
+1666922417988	geckodriver	INFO	Listening on 127.0.0.1:18791
+1666922420042	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofiletTbsqW"
+1666922420535	Marionette	INFO	Marionette enabled
+1666922420540	Marionette	INFO	Listening on port 18802
+Read port: 18802
+1666922420787	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\testkong\\AppData\\Local\\Temp\\rust_mozprofiletTbsqW\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://g.alicdn.com/secdev/sufei_data/3.9.10/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js?v=1, line 5: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.7/et_n.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.7/et_n.js, line 2: WebGL context was lost.
+1666922426656	Marionette	INFO	Stopped listening on port 18802

@@ -4,6 +4,8 @@ import datetime
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
+import requests
+import pika
 
 
 def GetList():
@@ -85,17 +87,30 @@ def BreakList(N, names):
     else:
         name = [names[i:i + n] for i in range(0, len(names), n)]
         for j in name[N]:
-            name[N-1].append(j)
+            name[N - 1].append(j)
         del name[N]
     return name
 
 
+def getList():
+    res = requests.get(url="http://10.1.20.73:8080/member/getYesterdayNotifyMemberList?shopName=益好旗舰店")
+    return res.json()["data"]
+
+
+def Pick(data):
+    credentials = pika.PlainCredentials('admin', 'admin')
+    connection = pika.BlockingConnection(
+        pika.ConnectionParameters(host='10.168.20.90', port=5672, virtual_host='/', credentials=credentials))
+    channel = connection.channel()
+    channel.queue_declare(queue='qianniu-chat-log')
+    channel.basic_publish(exchange='', routing_key='qianniu-chat-log', body=data)
+    connection.close()
+
+
 if __name__ == '__main__':
-    users = GetList()
-    len(users)
-    user = BreakList(4, users)
-    print(user)
+    lists = getList()
+    l = BreakList(130, lists)[:2][0]
+    print(l)
     # lists = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     # ls = BreakList(4, lists)
     # print(ls)
-

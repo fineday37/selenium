@@ -7,7 +7,8 @@ from selenium.webdriver import Remote, DesiredCapabilities
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-from edge import GetList, BreakList
+from edge import getList, BreakList
+
 # option = webdriver.ChromeOptions()
 #
 # option.add_argument("headless")
@@ -20,8 +21,8 @@ handles = ls.window_handles
 ls.switch_to.window(handles[-1])
 ls.switch_to.frame('alibaba-login-box')
 time.sleep(1)
-ls.find_element_by_css_selector('[name="fm-login-id"]').send_keys("世纪开元旗舰店:李虎")
-ls.find_element_by_css_selector('[name="fm-login-password"]').send_keys("sjky36588")
+ls.find_element_by_css_selector('[name="fm-login-id"]').send_keys("益好旗舰店:李虎")
+ls.find_element_by_css_selector('[name="fm-login-password"]').send_keys("sjky2022")
 ls.find_element_by_css_selector('[type="submit"]').click()
 time.sleep(2)
 
@@ -29,7 +30,7 @@ time.sleep(2)
 def isElementExist(text):
     flag = True
     try:
-        text
+        ls.find_element_by_css_selector(text)
         return flag
 
     except:
@@ -37,8 +38,7 @@ def isElementExist(text):
         return flag
 
 
-frame = ls.find_element_by_css_selector('#baxia-dialog-content')
-if isElementExist(frame):
+if isElementExist('#baxia-dialog-content'):
     ls.switch_to.frame('baxia-dialog-content')
     slider = ls.find_element_by_css_selector("#nocaptcha #nc_1_n1z")
 
@@ -66,6 +66,13 @@ class BasePage:
                              desired_capabilities=node
                              )
 
+    def check_element_exists(self, element):
+        try:
+            self.driver.find_element_by_xpath(element)
+            return True
+        except Exception as e:
+            return False
+
     def nickname(self, names):
         self.driver.get(
             "https://market.m.taobao.com/app/qn/im-history-search/index.html?spm=a21dfk.22864181.0.0.61cc74c8B4r8FE#/")
@@ -83,44 +90,88 @@ class BasePage:
         self.driver.get(
             "https://market.m.taobao.com/app/qn/im-history-search/index.html?spm=a21dfk.22864181.0.0.61cc74c8B4r8FE#/")
         datas = []
-        time.sleep(1)
+        time.sleep(2)
 
         yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
         self.driver.find_element_by_css_selector('[placeholder="起始日期"]').click()
+        time.sleep(1)
         self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[0].send_keys(Keys.CONTROL, "a")
         self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[0].send_keys(Keys.BACKSPACE)
         self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[0].send_keys(str(yesterday))
         self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[1].click()
         self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[1].send_keys(str(yesterday))
+        self.driver.find_elements_by_css_selector('[placeholder="YYYY-MM-DD"]')[0].click()
         self.driver.find_element_by_xpath('/html/body/div[2]/div/div[3]/button/span').click()
+        time.sleep(2)
         for name in names:
-            self.driver.find_element_by_css_selector('.next-input.next-medium.nickname [placeholder="请输入"]').send_keys(
-                name)
-            self.driver.find_element_by_css_selector('.next-btn.next-medium.next-btn-normal.button').click()
-            time.sleep(1)
-            element = self.driver.find_elements_by_xpath('//*[@class="_chatWrap_1fgcw_8"]')
-            print(element)
-            print(len(element))
-            for i in range(len(element)):
-                interval = self.driver.find_elements_by_xpath('//*[@class="_chatTime_1fgcw_62"]')[i].text
+            try:
+                self.driver.find_element_by_css_selector(
+                    '.next-input.next-medium.nickname [placeholder="请输入"]').send_keys(name)
+                self.driver.find_element_by_css_selector('.next-btn.next-medium.next-btn-normal.button').click()
+                time.sleep(3)
+                if not self.check_element_exists('//*[@class="results-list"]'):
+                    element = self.driver.find_elements_by_xpath('//*[@class="_chatWrap_1fgcw_8"]')
+                    # print(element)
+                    print(len(element))
+                    self.traverse(element, datas, name, yesterday)
+                else:
+                    same_names = self.driver.find_elements_by_css_selector('.message-list-left .results-list')
+                    for o in same_names:
+                        o.click()
+                        time.sleep(1)
+                        element_same = self.driver.find_elements_by_xpath('//*[@class="_chatWrap_1fgcw_8"]')
+                        for s in range(len(element_same)):
+                            interval = self.driver.find_elements_by_xpath('//*[@class="_chatTime_1fgcw_62"]')[s].text
 
-                service = self.driver.find_elements_by_xpath('//*[@class="_chatName_1fgcw_54"]')[i].text
+                            service = self.driver.find_elements_by_xpath('//*[@class="_chatName_1fgcw_54"]')[s].text
 
-                ls = self.driver.find_elements_by_xpath('//*[@class="_chatName_1fgcw_54"]//preceding-sibling::*')
-                if ls[i].get_attribute("class") == "_chatTextLeft_1fgcw_32":
-                    customer = ls[i].text
-                    datas.append({"customCare": name, "datetime": str(yesterday) + " " + interval, "customer": customer,
-                                  "service": service})
-                elif ls[i].get_attribute("class") == "_img_1fgcw_50":
-                    customer = ls[i].get_attribute("src")
-                    datas.append({"customCare": name, "datetime": str(yesterday) + " " + interval, "customer": customer,
-                                  "service": service})
+                            ls = self.driver.find_elements_by_xpath(
+                                '//*[@class="_chatName_1fgcw_54"]//preceding-sibling::*')
+                            if ls[s].get_attribute("class") == "_chatTextLeft_1fgcw_32":
+                                customer = ls[s].text
+                                datas.append(
+                                    {"customCare": name, "datetime": str(yesterday) + " " + interval,
+                                     "customer": customer,
+                                     "service": service})
+                            elif ls[s].get_attribute("class") == "_img_1fgcw_50":
+                                customer = ls[s].get_attribute("src")
+                                datas.append(
+                                    {"customCare": name, "datetime": str(yesterday) + " " + interval,
+                                     "customer": customer,
+                                     "service": service})
                 self.driver.find_element_by_css_selector('.next-input.next-medium.nickname [placeholder="请输入"]') \
                     .send_keys(Keys.CONTROL, "a")
                 self.driver.find_element_by_css_selector('.next-input.next-medium.nickname [placeholder="请输入"]') \
                     .send_keys(Keys.BACKSPACE)
+            except Exception as e:
+                print(e)
+                with open("./error.txt", mode="a") as f:
+                    f.write(name)
+                    f.write('\n')
+                time.sleep(10)
+                self.driver.find_element_by_css_selector('.next-input.next-medium.nickname [placeholder="请输入"]') \
+                    .send_keys(Keys.CONTROL, "a")
+                self.driver.find_element_by_css_selector('.next-input.next-medium.nickname [placeholder="请输入"]') \
+                    .send_keys(Keys.BACKSPACE)
+
         time.sleep(1)
         self.driver.quit()
+
+    def traverse(self, element, datas, name, yesterday):
+        for i in range(len(element)):
+            interval = self.driver.find_elements_by_xpath('//*[@class="_chatTime_1fgcw_62"]')[i].text
+
+            service = self.driver.find_elements_by_xpath('//*[@class="_chatName_1fgcw_54"]')[i].text
+
+            ls = self.driver.find_elements_by_xpath('//*[@class="_chatName_1fgcw_54"]//preceding-sibling::*')
+            if ls[i].get_attribute("class") == "_chatTextLeft_1fgcw_32":
+                customer = ls[i].text
+                datas.append({"customCare": name, "datetime": str(yesterday) + " " + interval, "customer": customer,
+                              "service": service})
+            elif ls[i].get_attribute("class") == "_img_1fgcw_50":
+                customer = ls[i].get_attribute("src")
+                datas.append({"customCare": name, "datetime": str(yesterday) + " " + interval, "customer": customer,
+                              "service": service})
 
 
 def distribution(user, routing):
@@ -129,17 +180,27 @@ def distribution(user, routing):
 
 
 if __name__ == '__main__':
-    lists = [{'http://10.27.1.12:5555/wd/hub': 'chrome',
-              # 'http://10.27.1.171:5555/wd/hub': 'firefox',
-              # 'http://10.27.1.169:6670/wd/hub': 'chrome'
-              }, {'http://10.27.1.12:4444/wd/hub': 'chrome'}
-             # {'http://10.27.1.12:6666/wd/hub': 'chrome'}]
-             ]
-    # }, {'http://10.27.1.100:6666/wd/hub': 'chrome'}]
+    lists = [
+        {'http://10.27.1.100:8888/wd/hub': 'chrome'},
+        {"http://10.27.1.100:6666/wd/hub": 'chrome'},
+        {'http://10.27.1.100:7777/wd/hub': 'chrome'},
+        {'http://10.27.1.100:9999/wd/hub': 'chrome'},
+        {"http://10.27.1.100:6668/wd/hub": 'chrome'},
+        {"http://10.27.1.100:6669/wd/hub": 'chrome'},
+        {"http://10.27.1.100:6667/wd/hub": 'chrome'},
+        {'http://10.27.1.12:5555/wd/hub': 'chrome'},
+        {'http://10.27.1.12:6688/wd/hub': 'chrome'},
+        {'http://10.27.1.12:5558/wd/hub': 'chrome'},
+        ]
+    # lists = [
+    #     {'http://10.27.1.12:5555/wd/hub': 'chrome'},
+    #     {'http://10.27.1.12:6688/wd/hub': 'chrome'},
+    #     ]
     # users = [["woshinide1998程思雨", "世纪开元旗舰店:合欢"], ["世纪开元旗舰店:小星", "tb170394291"]]
-    users = GetList()
-    len(users)
-    user = BreakList(2, users)
+    users = getList()
+    user = BreakList(10, users)
+    len(user)
+    print("用户数: {}".format(len(user)))
     threads = []
     start = time.time()
     for z in list(zip(lists, user)):
